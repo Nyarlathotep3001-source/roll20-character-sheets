@@ -4,6 +4,10 @@
     </div>
     <div class ="sheet-item-dice">
         <input name='attr_affiliation' type='text' value='a'>
+        <input name='attr_distinction' type='text' value='a'>
+        <input name='attr_role' type='text' value='a'>
+        <input name='attr_res1a' type='text' value='a'>
+        <input name='attr_stress' type='text' value='a'>
         dice
     </div>
     <div class ="sheet-item-roll">
@@ -54,7 +58,7 @@
     <div class ="sheet-griditem sheet-item-distinctions_body">
         <ul>
 			<li>
-				<label class="sheet-dicepicker"><input type="radio" name="distinctions" value="dist1"><input type="text" name="attr_distinction1"/></label>
+				<label class="sheet-dicepicker"><input type="radio" name="attr_distinction" value="dist1"><input type="text" name="attr_distinction1"/></label>
 				<div class="sheet-styled-select">
 					<ul>
 						<li><label><input type="radio" name="attr_dist1" value="d8"><img src="http://www.thefirstcity.co.uk/rpg/dice/d8.jpg" alt="d8" width="32" height="32" border="0" align="middle" /></label></li>
@@ -63,7 +67,7 @@
 				</div>
 			</li>
 			<li>
-				<label class="sheet-dicepicker"><input type="radio" name="distinctions" value="dist2"><input type="text" name="attr_distinction2"/></label>
+				<label class="sheet-dicepicker"><input type="radio" name="attr_distinction" value="dist2"><input type="text" name="attr_distinction2"/></label>
 				<div class="sheet-styled-select">
 					<ul>
 						<li><label><input type="radio" name="attr_dist2" value="d8"><img src="http://www.thefirstcity.co.uk/rpg/dice/d8.jpg" alt="d8" width="32" height="32" border="0" align="middle" /></label></li>
@@ -72,7 +76,7 @@
 				</div>
 			</li>
 			<li>
-				<label class="sheet-dicepicker"><input type="radio" name="distinctions" value="dist3"><input type="text" name="attr_distinction3"/></label>
+				<label class="sheet-dicepicker"><input type="radio" name="attr_distinction" value="dist3"><input type="text" name="attr_distinction3"/></label>
 				<div class="sheet-styled-select">
 					<ul>
 						<li><label><input type="radio" name="attr_dist3" value="d8"><img src="http://www.thefirstcity.co.uk/rpg/dice/d8.jpg" alt="d8" width="32" height="32" border="0" align="middle" /></label></li>
@@ -80,7 +84,8 @@
 					</ul>
 				</div>
 			</li>
-			    <label class="sheet-dicepicker"><input type="radio" name="distinctions" value="dist4">No distinction used</label>
+			    <label class="sheet-dicepicker"><input type="radio" name="distinction" value="dist4">No distinction used</label>
+			    <input name='attr_dist4' type='text' value='o'>
 			<li>
 			    
 			</li>
@@ -90,7 +95,7 @@
     <div class ="sheet-griditem sheet-item-roles_body">
         <ul>
 			<li>
-				<label class="sheet-dicepicker"><input type="radio" name="role" value="forensics">Forensics</label>
+				<label class="sheet-dicepicker"><input type="radio" name="attr_role" value="forensics">Forensics</label>
 				<div class="sheet-styled-select">
 					<ul>
 						<li><label><input type="radio" name="attr_forensics" value="d4"><img src="http://www.thefirstcity.co.uk/rpg/dice/d4.jpg" alt="d4" width="32" height="32" border="0" align="middle" /></label></li>
@@ -102,7 +107,7 @@
 				</div>
 			</li>
 			<li>
-				<label class="sheet-dicepicker"><input type="radio" name="role" value="investigation">Investigation</label>
+				<label class="sheet-dicepicker"><input type="radio" name="attr_role" value="investigation">Investigation</label>
 				<div class="sheet-styled-select">
 					<ul>
 						<li><label><input type="radio" name="attr_investigation" value="d4"><img src="http://www.thefirstcity.co.uk/rpg/dice/d4.jpg" alt="d4" width="32" height="32" border="0" align="middle" /></label></li>
@@ -114,7 +119,7 @@
 				</div>
 			</li>
 			<li>
-				<label class="sheet-dicepicker"><input type="radio" name="role" value="legal">Legal</label>
+				<label class="sheet-dicepicker"><input type="radio" name="attr_role" value="legal">Legal</label>
 				<div class="sheet-styled-select">
 					<ul>
 						<li><label><input type="radio" name="attr_legal" value="d4"><img src="http://www.thefirstcity.co.uk/rpg/dice/d4.jpg" alt="d4" width="32" height="32" border="0" align="middle" /></label></li>
@@ -126,7 +131,7 @@
 				</div>
 			</li>
 			<li>
-				<label class="sheet-dicepicker"><input type="radio" name="role" value="medicine">Medicine</label>
+				<label class="sheet-dicepicker"><input type="radio" name="attr_role" value="medicine">Medicine</label>
 				<div class="sheet-styled-select">
 					<ul>
 						<li><label><input type="radio" name="attr_medicine" value="d4"><img src="http://www.thefirstcity.co.uk/rpg/dice/d4.jpg" alt="d4" width="32" height="32" border="0" align="middle" /></label></li>
@@ -138,7 +143,7 @@
 				</div>
 			</li>
 			<li>
-				<label class="sheet-dicepicker"><input type="radio" name="role" value="psychology">Psychology</label>
+				<label class="sheet-dicepicker"><input type="radio" name="attr_role" value="psychology">Psychology</label>
 				<div class="sheet-styled-select">
 					<ul>
 						<li><label><input type="radio" name="attr_psychology" value="d4"><img src="http://www.thefirstcity.co.uk/rpg/dice/d4.jpg" alt="d4" width="32" height="32" border="0" align="middle" /></label></li>
@@ -150,7 +155,7 @@
 				</div>
 			</li>
 			<li>
-				<label class="sheet-dicepicker"><input type="radio" name="role" value="tactics">Tactics</label>
+				<label class="sheet-dicepicker"><input type="radio" name="attr_role" value="tactics">Tactics</label>
 				<div class="sheet-styled-select">
 					<ul>
 						<li><label><input type="radio" name="attr_tactics" value="d4"><img src="http://www.thefirstcity.co.uk/rpg/dice/d4.jpg" alt="d4" width="32" height="32" border="0" align="middle" /></label></li>
@@ -162,7 +167,7 @@
 				</div>
 			</li>
 			<li>
-				<label class="sheet-dicepicker"><input type="radio" name="role" value="technology">Technology</label>
+				<label class="sheet-dicepicker"><input type="radio" name="attr_role" value="technology">Technology</label>
 				<div class="sheet-styled-select">
 					<ul>
 						<li><label><input type="radio" name="attr_technology" value="d4"><img src="http://www.thefirstcity.co.uk/rpg/dice/d4.jpg" alt="d4" width="32" height="32" border="0" align="middle" /></label></li>
@@ -290,15 +295,17 @@
 		</ul>     
     </div>
     <div class ="sheet-item-h">Notes
-        <input name='attr_aff_die' type='text' value='0'>
-        <input name='attr_set_manual' type='number' value='0'>
-        <input name='attr_set_by_worker' type='number' value='0'>
-        <input name='attr_set_by_worker_readonly' readonly type='number' value='0'>
+
+        <input name='attr_affiliation_die' type='text' value='0'>
+        <input name='attr_distinction_die' type='text' value='0'>
+        <input name='attr_role_die' type='text' value='0'>
+        <input name='attr_resources_dice' type='text' value='x'>
+        <input name='attr_stress_die' readonly type='text' value='0'>
     </div>
 </div>
 
 <script type='text/worker'>
-    on('change:affiliation',(event)=>{
+    on('change:affiliation change:distinction change:role change:stress' ,(event)=>{
         console.log(`============================ affiliation change detected ============================`);
         console.log(event);
         console.log(`========================================================`);
@@ -306,20 +313,33 @@
             console.log(`============================ related setting detected ============================`);
             console.log(values);
             console.log(`========================================================`);
-            target = "aff_die";
+            target = event.sourceAttribute + "_die";
             let vals = {};
             vals[target] = values[event.newValue];
             setAttrs(vals);
         });
     });
-
-    on('change:set_manual',(event)=>{
-        setAttrs({set_by_worker:event.newValue*2,set_by_worker_readonly:event.newValue*5});//Sets the two attributes via sheetworker; is not silent
-    });
-    on('change:set_by_worker change:set_by_worker_readonly',(event)=>{
-        console.log(`============================ Worker Change Detected ============================`);
-        console.log(event);//logs the change event. There are two logs any time that set_manual is changed
+    
+    on('change:res1a change:res1b' ,(event)=>{
+        console.log(`============================ resource setting detected ============================`);
+        console.log(event);
         console.log(`========================================================`);
-    })
+        var checked = event.newValue
+        if(checked === '0') {
+              console.log(`============================ not checked ============================`);
+              console.log(checked);
+              console.log(`========================================================`);
+          } else {
+              console.log(`============================ checked ============================`);
+              console.log(checked);
+              console.log(`========================================================`);
+              getAttrs('resources_dice', function (values) {
+                  console.log(`============================ resourses dice ============================`);
+                  //console.log(values);
+                  console.log(`========================================================`);
+                  //setAttrs({'resources_dice':values['resources_dice'] + ';' + checked});
+              });    
+        }
+    });
 
 </script>
