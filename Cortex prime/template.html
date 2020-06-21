@@ -1,0 +1,17 @@
+<rolltemplate class="sheet-rolltemplate-cortex_roll">
+    <div class="sheet-rolltemplate-container">
+		<div class="sheet-rolltemplate-header">{{rollname}}</div>
+		<div class="arrow-container"><div class="arrow-right"></div></div>
+		<div class="sheet-rolltemplate-subheader">Main roll results</div>
+		<div class="sheet-rolltemplate_keptdice">{{kept_main_dicepool}}</div>
+		<div class="sheet-rolltemplate_upkeptdice">{{unkept_main_dicepool}}</div>
+		<div class="arrow-container"><div class="arrow-right"></div></div>
+		{{#<resources_used>}}	
+			<div class="sheet-rolltemplate-subheader">Resources roll results</div>
+			<div class="sheet-rolltemplate_keptdice">{{kept_resources_dicepool}}</div>
+			<div class="sheet-rolltemplate_upkeptdice">{{unkept_resources_dicepool}}</div>
+			<div class="arrow-container"><div class="arrow-right"></div></div>
+		{{#<resources_used>}}
+		<div class="sheet-rolltemplate-footer">Result: {{dice_result}}</div>
+	</div>
+</rolltemplate>
