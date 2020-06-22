@@ -245,7 +245,7 @@ ul {
 	margin: 0px;
 	padding: 5px; 
 	border: 2px solid pink; 
-	width: 250px;
+	width: 350px;
 	height: 60px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -407,6 +407,223 @@ ul {
 
 .sheet-receiver_d4_3{
     display:var(--reciever_d4_3-display);
+}
+
+
+.sheet-resource_d10_1[value*="one"] ~ *{
+    --resource_d10_1-display:none;
+}
+
+.sheet-resource_d10_1[value*="two"] ~ *{
+    --resource_d10_1-display:block;
+}
+
+.sheet-resource_d10_2[value*="one"] ~ *{
+    --resource_d10_2-display:none;
+}
+
+.sheet-resource_d10_2[value*="two"] ~ *{
+    --resource_d10_2-display:block;
+}
+
+.sheet-resource_d10_3[value*="one"] ~ *{
+    --resource_d10_3-display:none;
+}
+
+.sheet-resource_d10_3[value*="two"] ~ *{
+    --resource_d10_3-display:block;
+}
+
+.sheet-resource_d10_4[value*="one"] ~ *{
+    --resource_d10_4-display:none;
+}
+
+.sheet-resource_d10_4[value*="two"] ~ *{
+    --resource_d10_4-display:block;
+}
+
+.sheet-resource_d10_5[value*="one"] ~ *{
+    --resource_d10_5-display:none;
+}
+
+.sheet-resource_d10_5[value*="two"] ~ *{
+    --resource_d10_5-display:block;
+}
+
+.sheet-resource_d10_6[value*="one"] ~ *{
+    --resource_d10_6-display:none;
+}
+
+.sheet-resource_d10_6[value*="two"] ~ *{
+    --resource_d10_6-display:block;
+}
+
+.sheet-resource_d8_1[value*="one"] ~ *{
+    --resource_d8_1-display:none;
+}
+
+.sheet-resource_d8_1[value*="two"] ~ *{
+    --resource_d8_1-display:block;
+}
+
+.sheet-resource_d8_2[value*="one"] ~ *{
+    --resource_d8_2-display:none;
+}
+
+.sheet-resource_d8_2[value*="two"] ~ *{
+    --resource_d8_2-display:block;
+}
+
+.sheet-resource_d8_3[value*="one"] ~ *{
+    --resource_d8_3-display:none;
+}
+
+.sheet-resource_d8_3[value*="two"] ~ *{
+    --resource_d8_3-display:block;
+}
+
+.sheet-resource_d8_4[value*="one"] ~ *{
+    --resource_d8_4-display:none;
+}
+
+.sheet-resource_d8_4[value*="two"] ~ *{
+    --resource_d8_4-display:block;
+}
+
+.sheet-resource_d8_5[value*="one"] ~ *{
+    --resource_d8_5-display:none;
+}
+
+.sheet-resource_d8_5[value*="two"] ~ *{
+    --resource_d8_5-display:block;
+}
+
+.sheet-resource_d8_6[value*="one"] ~ *{
+    --resource_d8_6-display:none;
+}
+
+.sheet-resource_d8_6[value*="two"] ~ *{
+    --resource_d8_6-display:block;
+}
+
+.sheet-resource_d6_1[value*="one"] ~ *{
+    --resource_d6_1-display:none;
+}
+
+.sheet-resource_d6_1[value*="two"] ~ *{
+    --resource_d6_1-display:block;
+}
+
+.sheet-resource_d6_2[value*="one"] ~ *{
+    --resource_d6_2-display:none;
+}
+
+.sheet-resource_d6_2[value*="two"] ~ *{
+    --resource_d6_2-display:block;
+}
+
+.sheet-resource_d6_3[value*="one"] ~ *{
+    --resource_d6_3-display:none;
+}
+
+.sheet-resource_d6_3[value*="two"] ~ *{
+    --resource_d6_3-display:block;
+}
+
+.sheet-resource_d6_4[value*="one"] ~ *{
+    --resource_d6_4-display:none;
+}
+
+.sheet-resource_d6_4[value*="two"] ~ *{
+    --resource_d6_4-display:block;
+}
+
+.sheet-resource_d6_5[value*="one"] ~ *{
+    --resource_d6_5-display:none;
+}
+
+.sheet-resource_d6_5[value*="two"] ~ *{
+    --resource_d6_5-display:block;
+}
+
+.sheet-resource_d6_6[value*="one"] ~ *{
+    --resource_d6_6-display:none;
+}
+
+.sheet-resource_d6_6[value*="two"] ~ *{
+    --resource_d6_6-display:block;
+}
+
+.sheet-rresource_d10_1{
+    display:var(--resource_d10_1-display);
+}
+
+.sheet-rresource_d10_2{
+    display:var(--resource_d10_2-display);
+}
+
+.sheet-rresource_d10_3{
+    display:var(--resource_d10_3-display);
+}
+
+.sheet-rresource_d10_4{
+    display:var(--resource_d10_4-display);
+}
+
+.sheet-rresource_d10_5{
+    display:var(--resource_d10_5-display);
+}
+
+.sheet-rresource_d10_6{
+    display:var(--resource_d10_6-display);
+}
+
+.sheet-rresource_d8_1{
+    display:var(--resource_d8_1-display);
+}
+
+.sheet-rresource_d8_2{
+    display:var(--resource_d8_2-display);
+}
+
+.sheet-rresource_d8_3{
+    display:var(--resource_d8_3-display);
+}
+
+.sheet-rresource_d8_4{
+    display:var(--resource_d8_4-display);
+}
+
+.sheet-rresource_d8_5{
+    display:var(--resource_d8_5-display);
+}
+
+.sheet-rresource_d8_6{
+    display:var(--resource_d8_6-display);
+}
+
+.sheet-rresource_d6_1{
+    display:var(--resource_d6_1-display);
+}
+
+.sheet-rresource_d6_2{
+    display:var(--resource_d6_2-display);
+}
+
+.sheet-rresource_d6_3{
+    display:var(--resource_d6_3-display);
+}
+
+.sheet-rresource_d6_4{
+    display:var(--resource_d6_4-display);
+}
+
+.sheet-rresource_d6_5{
+    display:var(--resource_d6_5-display);
+}
+
+.sheet-rresource_d6_6{
+    display:var(--resource_d6_6-display);
 }
 
 .sheet-control1-label{
