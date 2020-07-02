@@ -68,8 +68,7 @@ input {
   input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; }
-  input[name='attr_stats_toggle'],
-  input[name='attr_stats_toggle'] + span {
+  input[name='attr_stats_toggle'], input[name='attr_stats_toggle'] + span {
     position: relative; }
   input[name='attr_stats_toggle'] {
     opacity: 0;
@@ -189,11 +188,9 @@ input.sheet-toggle {
 
 .sheet-npc div.sheet-repeating input[name='attr_flag'] + span {
   opacity: 0; }
-
-.sheet-npc div.sheet-repeating input:checked[name='attr_flag'] + span {
+.sheet-npc div.sheet-repeating input[name='attr_flag']:checked + span {
   opacity: 1; }
-
-.sheet-npc div.sheet-repeating input:checked[name='attr_flag'] ~ .sheet-settings {
+.sheet-npc div.sheet-repeating input[name='attr_flag']:checked ~ .sheet-settings {
   display: inline-grid;
   margin-bottom: 2%; }
 
@@ -319,10 +316,8 @@ input.sheet-indicator {
 /***** MATRIX *****/
 .sheet-matrix select.sheet-skill-select {
   width: 26.5%; }
-
 .sheet-matrix input[name="attr_flag"] + span {
   position: absolute; }
-
 .sheet-matrix .sheet-con-hex {
   margin-bottom: -10px;
   margin-right: 0px;
@@ -548,7 +543,6 @@ input.sheet-indicator {
 .sheet-condition-box .sheet-display,
 .sheet-condition-box .sheet-settings {
   margin-top: -10px; }
-
 .sheet-condition-box .sheet-settings {
   /***** CONDITION MONITOR DISPLAY*****/ }
   .sheet-condition-box .sheet-settings input {
@@ -667,8 +661,9 @@ input.sheet-indicator {
     text-transform: capitalize;
     padding: 5px;
     transition: transform .2s; }
-    .sheet-tabs button[type='action'].sheet-pictos, .sheet-tabs .repcontrol button.repcontrol_edit[type='action']:after, .repcontrol .sheet-tabs button.repcontrol_edit[type='action']:after,
-    .sheet-tabs .repcontrol button.repcontrol_add[type='action']:after, .repcontrol .sheet-tabs button.repcontrol_add[type='action']:after, .sheet-tabs .itemcontrol button.repcontrol_del[type='action'], .itemcontrol .sheet-tabs button.repcontrol_del[type='action'] {
+    .sheet-tabs button[type='action'].sheet-pictos, .sheet-tabs .repcontrol button[type='action'].repcontrol_edit:after, .repcontrol .sheet-tabs button[type='action'].repcontrol_edit:after,
+    .sheet-tabs .repcontrol button[type='action'].repcontrol_add:after,
+    .repcontrol .sheet-tabs button[type='action'].repcontrol_add:after, .sheet-tabs .itemcontrol button[type='action'].repcontrol_del, .itemcontrol .sheet-tabs button[type='action'].repcontrol_del {
       text-transform: lowercase; }
     .sheet-tabs button[type='action']:hover, .sheet-tabs button[type='action']:focus, .sheet-tabs button[type='action']:active {
       text-shadow: inset 0px 0px 3px 1px #e31715;
@@ -695,7 +690,6 @@ input.sheet-indicator {
 .sheet-settings-toggle input,
 .sheet-settings-flag input {
   width: 3em; }
-
 .sheet-settings-toggle input[type='checkbox'] + span,
 .sheet-settings-flag input[type='checkbox'] + span {
   background: transparent;
@@ -707,42 +701,32 @@ input.sheet-indicator {
 /***** GENERIC STYLES *****/
 select.sheet-attribute-select option:nth-of-type(1n+5) {
   color: #610b0d; }
-
 select.sheet-attribute-select option:nth-of-type(1n+9) {
   color: #7a2593; }
-
 select.sheet-limit-select option:nth-of-type(1n+5) {
   color: #610b0d; }
 
 /*:+:+:+: MATRIX DEVICE :+:+:+:*/
 div.sheet-matrix-device button[name*='Attack']:hover {
   color: #cc0701; }
-
 div.sheet-matrix-device button[name*='Sleaze']:hover {
   color: #007bfc; }
-
 div.sheet-matrix-device button[name*='Data']:hover {
   color: #88dd04; }
-
 div.sheet-matrix-device button[name*='Firewall']:hover {
   color: #f88703; }
-
 div.sheet-matrix-device input[type='radio'] {
   position: relative;
   opacity: 0;
   z-index: 2; }
   div.sheet-matrix-device input[type='radio'] + span {
     position: relative; }
-
 div.sheet-matrix-device .sheet-matrixAttack {
   box-shadow: 0px 0px 29px 8px  #cc0701; }
-
 div.sheet-matrix-device .sheet-matrixSleaze {
   box-shadow: 0px 0px 29px 8px  #007bfc; }
-
 div.sheet-matrix-device .sheet-matrixData {
   box-shadow: 0px 0px 29px 8px  #88dd04; }
-
 div.sheet-matrix-device .sheet-matrixFirewall {
   box-shadow: 0px 0px 29px 8px  #f88703; }
 
@@ -838,8 +822,7 @@ div.sheet-matrix-device .sheet-matrixFirewall {
       grid-area: 1 / 1 / 2 / 6;
       height: 100%;
       width: 100%; }
-    .sheet-pc .sheet-tabs label[data-i18n-title='character name'] > input[type='text'],
-    .sheet-pc .sheet-tabs label[data-i18n-title='player name'] > input[type='text'] {
+    .sheet-pc .sheet-tabs label[data-i18n-title='character name'] > input[type='text'], .sheet-pc .sheet-tabs label[data-i18n-title='player name'] > input[type='text'] {
       color: #fff;
       font-weight: bolder;
       background-color: transparent;
@@ -993,16 +976,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
           white-space: pre-line; }
       .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-collapse-flag {
         grid-area: 1 / 4 / 1 / 5; }
-      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+      .sheet-settings-flag .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+      .repcontrol .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-collapse-flag + span.repcontrol_del {
         grid-area: 1 / 4 / 1 / 5; }
       .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-settings-flag,
       .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-settings-flag + span.sheet-pictos,
-      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-settings-toggle .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-settings-flag .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-settings-toggle .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-settings-flag .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input[type='checkbox'].sheet-settings-flag + span,
       .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
       .repcontrol .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
       .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-quality div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1030,16 +1015,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
           white-space: pre-line; }
       .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-collapse-flag {
         grid-area: 1 / 4 / 1 / 5; }
-      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+      .sheet-settings-flag .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+      .repcontrol .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-collapse-flag + span.repcontrol_del {
         grid-area: 1 / 4 / 1 / 5; }
       .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-settings-flag,
       .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-settings-flag + span.sheet-pictos,
-      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-settings-toggle .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-settings-flag .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-settings-toggle .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-settings-flag .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input[type='checkbox'].sheet-settings-flag + span,
       .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
       .repcontrol .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
       .sheet-pc div.sheet-core div.sheet-quality-box div.sheet-martial div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1100,16 +1087,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
         white-space: pre-line; }
     .sheet-pc div.sheet-skill-box div.repitem input.sheet-collapse-flag {
       grid-area: 1 / 5 / 1 / 6; }
-    .sheet-pc div.sheet-skill-box div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-skill-box div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-skill-box div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-skill-box div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-skill-box div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-skill-box div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-skill-box div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-    .sheet-pc div.sheet-skill-box div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-skill-box div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-skill-box div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-skill-box div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+    .sheet-pc div.sheet-skill-box div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-skill-box div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-skill-box div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-pc div.sheet-skill-box div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-skill-box div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-skill-box div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-skill-box div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+    .sheet-pc div.sheet-skill-box div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+    .repcontrol .sheet-pc div.sheet-skill-box div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-skill-box div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-skill-box div.repitem input.sheet-collapse-flag + span.repcontrol_del {
       grid-area: 1 / 5 / 1 / 6; }
     .sheet-pc div.sheet-skill-box div.repitem input.sheet-settings-flag,
     .sheet-pc div.sheet-skill-box div.repitem input.sheet-settings-flag + span.sheet-pictos,
-    .sheet-pc div.sheet-skill-box div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-toggle .sheet-pc div.sheet-skill-box div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-skill-box div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-flag .sheet-pc div.sheet-skill-box div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+    .sheet-pc div.sheet-skill-box div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-toggle .sheet-pc div.sheet-skill-box div.repitem input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-pc div.sheet-skill-box div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-skill-box div.repitem input[type='checkbox'].sheet-settings-flag + span,
     .sheet-pc div.sheet-skill-box div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
     .repcontrol .sheet-pc div.sheet-skill-box div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
     .sheet-pc div.sheet-skill-box div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1148,16 +1137,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
         white-space: pre-line; }
     .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-collapse-flag {
       grid-area: 1 / 8 / 1 / 9; }
-    .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-    .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+    .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+    .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+    .repcontrol .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-collapse-flag + span.repcontrol_del {
       grid-area: 1 / 8 / 1 / 9; }
     .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-settings-flag,
     .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-settings-flag + span.sheet-pictos,
-    .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-toggle .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-flag .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+    .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-toggle .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input[type='checkbox'].sheet-settings-flag + span,
     .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
     .repcontrol .sheet-pc div.sheet-arms div.sheet-weapons div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
     .sheet-pc div.sheet-arms div.sheet-weapons div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1212,16 +1203,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
         white-space: pre-line; }
     .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-collapse-flag {
       grid-area: 1 / 9 / 1 / 10; }
-    .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-arms div.sheet-armor div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-arms div.sheet-armor div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-arms div.sheet-armor div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-    .sheet-pc div.sheet-arms div.sheet-armor div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-arms div.sheet-armor div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+    .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-arms div.sheet-armor div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-arms div.sheet-armor div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-pc div.sheet-arms div.sheet-armor div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-arms div.sheet-armor div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-arms div.sheet-armor div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+    .sheet-pc div.sheet-arms div.sheet-armor div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+    .repcontrol .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-arms div.sheet-armor div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-collapse-flag + span.repcontrol_del {
       grid-area: 1 / 9 / 1 / 10; }
     .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-settings-flag,
     .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-settings-flag + span.sheet-pictos,
-    .sheet-pc div.sheet-arms div.sheet-armor div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-toggle .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-arms div.sheet-armor div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-flag .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+    .sheet-pc div.sheet-arms div.sheet-armor div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-toggle .sheet-pc div.sheet-arms div.sheet-armor div.repitem input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-pc div.sheet-arms div.sheet-armor div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-arms div.sheet-armor div.repitem input[type='checkbox'].sheet-settings-flag + span,
     .sheet-pc div.sheet-arms div.sheet-armor div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
     .repcontrol .sheet-pc div.sheet-arms div.sheet-armor div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
     .sheet-pc div.sheet-arms div.sheet-armor div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1254,16 +1247,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
       grid-area: 1 / 1 / 1 / 5;
       position: absolute;
       width: 100%; }
-    .sheet-pc div.sheet-augs div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-augs div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-augs div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-augs div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-augs div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-augs div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-augs div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-    .sheet-pc div.sheet-augs div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-augs div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-augs div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-augs div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+    .sheet-pc div.sheet-augs div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-augs div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-augs div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-pc div.sheet-augs div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-augs div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-augs div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-augs div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+    .sheet-pc div.sheet-augs div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+    .repcontrol .sheet-pc div.sheet-augs div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-augs div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-augs div.repitem input.sheet-collapse-flag + span.repcontrol_del {
       grid-area: 1 / 4 / 1 / 5; }
     .sheet-pc div.sheet-augs div.repitem input.sheet-settings-flag,
     .sheet-pc div.sheet-augs div.repitem input.sheet-settings-flag + span.sheet-pictos,
-    .sheet-pc div.sheet-augs div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-toggle .sheet-pc div.sheet-augs div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-augs div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-flag .sheet-pc div.sheet-augs div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+    .sheet-pc div.sheet-augs div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-toggle .sheet-pc div.sheet-augs div.repitem input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-pc div.sheet-augs div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-augs div.repitem input[type='checkbox'].sheet-settings-flag + span,
     .sheet-pc div.sheet-augs div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
     .repcontrol .sheet-pc div.sheet-augs div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
     .sheet-pc div.sheet-augs div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1291,16 +1286,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
         white-space: pre-line; }
     .sheet-pc div.sheet-gear div.repitem input.sheet-collapse-flag {
       grid-area: 1 / 5 / 1 / 6; }
-    .sheet-pc div.sheet-gear div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-gear div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-gear div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-gear div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-gear div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-gear div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-gear div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-    .sheet-pc div.sheet-gear div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-gear div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-gear div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-gear div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+    .sheet-pc div.sheet-gear div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-gear div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-gear div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-pc div.sheet-gear div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-gear div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-gear div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-gear div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+    .sheet-pc div.sheet-gear div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+    .repcontrol .sheet-pc div.sheet-gear div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-gear div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-gear div.repitem input.sheet-collapse-flag + span.repcontrol_del {
       grid-area: 1 / 5 / 1 / 6; }
     .sheet-pc div.sheet-gear div.repitem input.sheet-settings-flag,
     .sheet-pc div.sheet-gear div.repitem input.sheet-settings-flag + span.sheet-pictos,
-    .sheet-pc div.sheet-gear div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-toggle .sheet-pc div.sheet-gear div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-gear div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-flag .sheet-pc div.sheet-gear div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+    .sheet-pc div.sheet-gear div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-toggle .sheet-pc div.sheet-gear div.repitem input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-pc div.sheet-gear div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-gear div.repitem input[type='checkbox'].sheet-settings-flag + span,
     .sheet-pc div.sheet-gear div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
     .repcontrol .sheet-pc div.sheet-gear div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
     .sheet-pc div.sheet-gear div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1366,16 +1363,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
           white-space: pre-line; }
       .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-collapse-flag {
         grid-area: 1 / 6 / 1 / 7; }
-      .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-      .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-      .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+      .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+      .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+      .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+      .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+      .repcontrol .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-collapse-flag + span.repcontrol_del {
         grid-area: 1 / 6 / 1 / 7; }
       .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-settings-flag,
       .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-settings-flag + span.sheet-pictos,
-      .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+      .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input[type='checkbox'].sheet-settings-flag + span,
       .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
       .repcontrol .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
       .sheet-pc div.sheet-magic div.sheet-spellsForumlas div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1403,16 +1402,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
         white-space: pre-line; }
     .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-collapse-flag {
       grid-area: 1 / 2 / 1 / 3; }
-    .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-magic div.sheet-magic-rituals .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-collapse-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-magic div.sheet-magic-rituals .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-magic div.sheet-magic-rituals .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-collapse-flag + span.repcontrol_edit:after,
-    .sheet-pc div.sheet-magic div.sheet-magic-rituals .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-magic div.sheet-magic-rituals .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-collapse-flag + span.repcontrol_del {
+    .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-magic div.sheet-magic-rituals .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-magic-rituals input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-pc div.sheet-magic div.sheet-magic-rituals .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-magic-rituals input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-magic div.sheet-magic-rituals .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-collapse-flag + span.repcontrol_edit:after,
+    .sheet-pc div.sheet-magic div.sheet-magic-rituals .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+    .repcontrol .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-magic div.sheet-magic-rituals .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-collapse-flag + span.repcontrol_del {
       grid-area: 1 / 2 / 1 / 3; }
     .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-settings-flag,
     .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-settings-flag + span.sheet-pictos,
-    .sheet-pc div.sheet-magic div.sheet-magic-rituals .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-magic div.sheet-magic-rituals .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-settings-flag[type='checkbox'] + span,
+    .sheet-pc div.sheet-magic div.sheet-magic-rituals .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-magic-rituals input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-pc div.sheet-magic div.sheet-magic-rituals .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-magic-rituals input[type='checkbox'].sheet-settings-flag + span,
     .sheet-pc div.sheet-magic div.sheet-magic-rituals .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
     .repcontrol .sheet-pc div.sheet-magic div.sheet-magic-rituals input.sheet-settings-flag + span.repcontrol_edit:after,
     .sheet-pc div.sheet-magic div.sheet-magic-rituals .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1447,16 +1448,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
             white-space: pre-line; }
         .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-collapse-flag {
           grid-area: 1 / 5 / 1 / 6; }
-        .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-        .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-        .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+        .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+        .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+        .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+        .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+        .repcontrol .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-collapse-flag + span.repcontrol_del {
           grid-area: 1 / 5 / 1 / 6; }
         .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-settings-flag,
         .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-settings-flag + span.sheet-pictos,
-        .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-        .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-        .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-        .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+        .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+        .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input[type='checkbox'].sheet-settings-flag + span,
+        .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+        .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input[type='checkbox'].sheet-settings-flag + span,
         .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
         .repcontrol .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
         .sheet-pc div.sheet-magic div.sheet-magic-preps div.sheet-prepared-preparations div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1487,16 +1490,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
         grid-area: 1 / 1 / 1 / 4;
         position: absolute;
         width: 100%; }
-      .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-magic div.sheet-powers div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-      .sheet-pc div.sheet-magic div.sheet-powers div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-magic div.sheet-powers div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-      .sheet-pc div.sheet-magic div.sheet-powers div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-magic div.sheet-powers div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+      .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-magic div.sheet-powers div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-powers div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+      .sheet-pc div.sheet-magic div.sheet-powers div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+      .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-powers div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-magic div.sheet-powers div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+      .sheet-pc div.sheet-magic div.sheet-powers div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+      .repcontrol .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-magic div.sheet-powers div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-collapse-flag + span.repcontrol_del {
         grid-area: 1 / 3 / 1 / 4; }
       .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-settings-flag,
       .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-settings-flag + span.sheet-pictos,
-      .sheet-pc div.sheet-magic div.sheet-powers div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-pc div.sheet-magic div.sheet-powers div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+      .sheet-pc div.sheet-magic div.sheet-powers div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-settings-toggle .sheet-pc div.sheet-magic div.sheet-powers div.repitem input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-pc div.sheet-magic div.sheet-powers div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-settings-flag .sheet-pc div.sheet-magic div.sheet-powers div.repitem input[type='checkbox'].sheet-settings-flag + span,
       .sheet-pc div.sheet-magic div.sheet-powers div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
       .repcontrol .sheet-pc div.sheet-magic div.sheet-powers div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
       .sheet-pc div.sheet-magic div.sheet-powers div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1532,16 +1537,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
           white-space: pre-line; }
       .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-collapse-flag {
         grid-area: 1 / 4 / 1 / 5; }
-      .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-      .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-      .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+      .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+      .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+      .sheet-settings-flag .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+      .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+      .repcontrol .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-collapse-flag + span.repcontrol_del {
         grid-area: 1 / 4 / 1 / 5; }
       .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-settings-flag,
       .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-settings-flag + span.sheet-pictos,
-      .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-settings-toggle .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-settings-flag .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+      .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-settings-toggle .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-settings-flag .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input[type='checkbox'].sheet-settings-flag + span,
       .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
       .repcontrol .sheet-pc div.sheet-matrix div.sheet-programs div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
       .sheet-pc div.sheet-matrix div.sheet-programs div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1583,16 +1590,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
           white-space: pre-line; }
       .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-collapse-flag {
         grid-area: 1 / 5 / 1 / 6; }
-      .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-      .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-      .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+      .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+      .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+      .sheet-settings-flag .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+      .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+      .repcontrol .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-collapse-flag + span.repcontrol_del {
         grid-area: 1 / 5 / 1 / 6; }
       .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-settings-flag,
       .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-settings-flag + span.sheet-pictos,
-      .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-settings-toggle .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-      .sheet-settings-flag .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+      .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-settings-toggle .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+      .sheet-settings-flag .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input[type='checkbox'].sheet-settings-flag + span,
       .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
       .repcontrol .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
       .sheet-pc div.sheet-matrix div.sheet-complex-forms div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1619,16 +1628,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
         white-space: pre-line; }
     .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-collapse-flag {
       grid-area: 1 / 3 / 1 / 4; }
-    .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-    .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+    .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+    .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+    .repcontrol .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-collapse-flag + span.repcontrol_del {
       grid-area: 1 / 3 / 1 / 4; }
     .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-settings-flag,
     .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-settings-flag + span.sheet-pictos,
-    .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-toggle .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-flag .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+    .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-toggle .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input[type='checkbox'].sheet-settings-flag + span,
     .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
     .repcontrol .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
     .sheet-pc div.sheet-social div.sheet-lifestyle div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1666,16 +1677,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
         white-space: pre-line; }
     .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-collapse-flag {
       grid-area: 1 / 6 / 1 / 7; }
-    .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-social div.sheet-contacts div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-social div.sheet-contacts div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-social div.sheet-contacts div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-    .sheet-pc div.sheet-social div.sheet-contacts div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-social div.sheet-contacts div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+    .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-social div.sheet-contacts div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-social div.sheet-contacts div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-pc div.sheet-social div.sheet-contacts div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-social div.sheet-contacts div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-social div.sheet-contacts div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+    .sheet-pc div.sheet-social div.sheet-contacts div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+    .repcontrol .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-social div.sheet-contacts div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-collapse-flag + span.repcontrol_del {
       grid-area: 1 / 6 / 1 / 7; }
     .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-settings-flag,
     .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-settings-flag + span.sheet-pictos,
-    .sheet-pc div.sheet-social div.sheet-contacts div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-toggle .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-social div.sheet-contacts div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-flag .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+    .sheet-pc div.sheet-social div.sheet-contacts div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-toggle .sheet-pc div.sheet-social div.sheet-contacts div.repitem input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-pc div.sheet-social div.sheet-contacts div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-social div.sheet-contacts div.repitem input[type='checkbox'].sheet-settings-flag + span,
     .sheet-pc div.sheet-social div.sheet-contacts div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
     .repcontrol .sheet-pc div.sheet-social div.sheet-contacts div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
     .sheet-pc div.sheet-social div.sheet-contacts div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1712,16 +1725,18 @@ div.sheet-matrix-device .sheet-matrixFirewall {
       grid-area: 1 / 1 / 1 / 4;
       position: absolute;
       width: 100%; }
-    .sheet-pc div.sheet-vehicle div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-vehicle div.repitem .sheet-settings-toggle input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-toggle .sheet-pc div.sheet-vehicle div.repitem input.sheet-collapse-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-vehicle div.repitem .sheet-settings-flag input.sheet-collapse-flag[type='checkbox'] + span, .sheet-settings-flag .sheet-pc div.sheet-vehicle div.repitem input.sheet-collapse-flag[type='checkbox'] + span, .sheet-pc div.sheet-vehicle div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-vehicle div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
-    .sheet-pc div.sheet-vehicle div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after, .repcontrol .sheet-pc div.sheet-vehicle div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-vehicle div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-vehicle div.repitem input.sheet-collapse-flag + span.repcontrol_del {
+    .sheet-pc div.sheet-vehicle div.repitem input.sheet-collapse-flag + span.sheet-pictos, .sheet-pc div.sheet-vehicle div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-collapse-flag + span, .sheet-settings-toggle .sheet-pc div.sheet-vehicle div.repitem input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-pc div.sheet-vehicle div.repitem .sheet-settings-flag input[type='checkbox'].sheet-collapse-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-vehicle div.repitem input[type='checkbox'].sheet-collapse-flag + span, .sheet-pc div.sheet-vehicle div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_edit:after, .repcontrol .sheet-pc div.sheet-vehicle div.repitem input.sheet-collapse-flag + span.repcontrol_edit:after,
+    .sheet-pc div.sheet-vehicle div.repitem .repcontrol input.sheet-collapse-flag + span.repcontrol_add:after,
+    .repcontrol .sheet-pc div.sheet-vehicle div.repitem input.sheet-collapse-flag + span.repcontrol_add:after, .sheet-pc div.sheet-vehicle div.repitem .itemcontrol input.sheet-collapse-flag + span.repcontrol_del, .itemcontrol .sheet-pc div.sheet-vehicle div.repitem input.sheet-collapse-flag + span.repcontrol_del {
       grid-area: 1 / 3 / 1 / 4; }
     .sheet-pc div.sheet-vehicle div.repitem input.sheet-settings-flag,
     .sheet-pc div.sheet-vehicle div.repitem input.sheet-settings-flag + span.sheet-pictos,
-    .sheet-pc div.sheet-vehicle div.repitem .sheet-settings-toggle input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-toggle .sheet-pc div.sheet-vehicle div.repitem input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-pc div.sheet-vehicle div.repitem .sheet-settings-flag input.sheet-settings-flag[type='checkbox'] + span,
-    .sheet-settings-flag .sheet-pc div.sheet-vehicle div.repitem input.sheet-settings-flag[type='checkbox'] + span,
+    .sheet-pc div.sheet-vehicle div.repitem .sheet-settings-toggle input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-toggle .sheet-pc div.sheet-vehicle div.repitem input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-pc div.sheet-vehicle div.repitem .sheet-settings-flag input[type='checkbox'].sheet-settings-flag + span,
+    .sheet-settings-flag .sheet-pc div.sheet-vehicle div.repitem input[type='checkbox'].sheet-settings-flag + span,
     .sheet-pc div.sheet-vehicle div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_edit:after,
     .repcontrol .sheet-pc div.sheet-vehicle div.repitem input.sheet-settings-flag + span.repcontrol_edit:after,
     .sheet-pc div.sheet-vehicle div.repitem .repcontrol input.sheet-settings-flag + span.repcontrol_add:after,
@@ -1827,8 +1842,7 @@ div.sheet-htab {
     width: 80px; }
     div.sheet-htab input[type='radio'] + h1 {
       color: #9a9a9a; }
-    div.sheet-htab input[type='radio']:hover ~ h1,
-    div.sheet-htab input[type='radio']:checked ~ h1 {
+    div.sheet-htab input[type='radio']:hover ~ h1, div.sheet-htab input[type='radio']:checked ~ h1 {
       color: #fff; }
 
 /***** BOXES FOR DIFFERENT PC SECTIONS *****/
@@ -1869,10 +1883,8 @@ div.sheet-htab {
 .sheet-core-combat button[type='roll'] {
   font-size: 0.9em;
   text-align: left; }
-
 .sheet-core-combat h2, .sheet-core-combat h3 {
   margin-right: 0px; }
-
 .sheet-core-combat button[name="roll_soak"] {
   max-width: 27%; }
   .sheet-core-combat button[name="roll_soak"] > span {
@@ -2107,8 +2119,10 @@ div.sheet-htab {
     .sheet-npc div.sheet-tabs input[name='attr_stats_toggle']:checked + span {
       color: #FCD116; }
     .sheet-npc div.sheet-tabs span.sheet-pictos, .sheet-npc div.sheet-tabs .sheet-settings-toggle input[type='checkbox'] + span, .sheet-settings-toggle .sheet-npc div.sheet-tabs input[type='checkbox'] + span,
-    .sheet-npc div.sheet-tabs .sheet-settings-flag input[type='checkbox'] + span, .sheet-settings-flag .sheet-npc div.sheet-tabs input[type='checkbox'] + span, .sheet-npc div.sheet-tabs .repcontrol span.repcontrol_edit:after, .repcontrol .sheet-npc div.sheet-tabs span.repcontrol_edit:after,
-    .sheet-npc div.sheet-tabs .repcontrol span.repcontrol_add:after, .repcontrol .sheet-npc div.sheet-tabs span.repcontrol_add:after, .sheet-npc div.sheet-tabs .itemcontrol span.repcontrol_del, .itemcontrol .sheet-npc div.sheet-tabs span.repcontrol_del {
+    .sheet-npc div.sheet-tabs .sheet-settings-flag input[type='checkbox'] + span,
+    .sheet-settings-flag .sheet-npc div.sheet-tabs input[type='checkbox'] + span, .sheet-npc div.sheet-tabs .repcontrol span.repcontrol_edit:after, .repcontrol .sheet-npc div.sheet-tabs span.repcontrol_edit:after,
+    .sheet-npc div.sheet-tabs .repcontrol span.repcontrol_add:after,
+    .repcontrol .sheet-npc div.sheet-tabs span.repcontrol_add:after, .sheet-npc div.sheet-tabs .itemcontrol span.repcontrol_del, .itemcontrol .sheet-npc div.sheet-tabs span.repcontrol_del {
       text-align: center;
       font-size: 1.2em; }
   .sheet-npc div.sheet-rows {
@@ -2136,8 +2150,7 @@ div.sheet-htab {
     text-decoration: underline; }
   .sheet-npc div.sheet-repeating input[type='number'], .sheet-npc div.sheet-repeating input[type='text'] {
     width: 100%; }
-  .sheet-npc div.sheet-repeating div.repitem:hover > input[name='attr_flag'] + span,
-  .sheet-npc div.sheet-repeating div.repitem:hover > input[name='attr_program_on'] + span {
+  .sheet-npc div.sheet-repeating div.repitem:hover > input[name='attr_flag'] + span, .sheet-npc div.sheet-repeating div.repitem:hover > input[name='attr_program_on'] + span {
     opacity: 1; }
   .sheet-npc div.sheet-repeating div.repitem div.sheet-settings {
     min-width: 700px; }
@@ -2233,11 +2246,11 @@ div.sheet-htab {
     .sheet-npc div.sheet-end div.sheet-weapons input[name='attr_weapon_range'][value='range'] ~ div.sheet-settings {
       grid-template-columns: 5em 3em 2fr 2fr 3em 3em 3em 1fr 3em 3em; }
       .sheet-npc div.sheet-end div.sheet-weapons input[name='attr_weapon_range'][value='range'] ~ div.sheet-settings label[data-i18n-title='notes'] {
-        grid-column: 1 / 10; }
+        grid-column: 1/10; }
     .sheet-npc div.sheet-end div.sheet-weapons input[name='attr_weapon_range'][value='melee'] ~ div.sheet-settings {
       grid-template-columns: 5em 3em 2fr 2fr 3em 3em 3em 3em; }
       .sheet-npc div.sheet-end div.sheet-weapons input[name='attr_weapon_range'][value='melee'] ~ div.sheet-settings label[data-i18n-title='notes'] {
-        grid-column: 1 / 9; }
+        grid-column: 1/9; }
     .sheet-npc div.sheet-end div.sheet-weapons div.sheet-settings {
       grid-column-gap: 0.2%; }
     .sheet-npc div.sheet-end div.sheet-spells div.sheet-settings,
@@ -2330,8 +2343,7 @@ div.sheet-htab {
           left: 2%; }
           .sheet-npc div.sheet-matrix-device div.repcontainer div.repitem input[name='attr_program_on'] + span {
             left: 2.5%; }
-          .sheet-npc div.sheet-matrix-device div.repcontainer div.repitem input[name='attr_program_on']:checked ~ button > span,
-          .sheet-npc div.sheet-matrix-device div.repcontainer div.repitem input[name='attr_program_on']:checked ~ span {
+          .sheet-npc div.sheet-matrix-device div.repcontainer div.repitem input[name='attr_program_on']:checked ~ button > span, .sheet-npc div.sheet-matrix-device div.repcontainer div.repitem input[name='attr_program_on']:checked ~ span {
             opacity: 1; }
         .sheet-npc div.sheet-matrix-device div.repcontainer div.repitem button[type="roll"] {
           margin-left: 5% !important; }

@@ -1,0 +1,530 @@
+.rolltemplate-pf table {
+  background: #fff;
+  border: solid 2px #000;
+  border-collapse: separate;
+  border-radius: 1em;
+  overflow: hidden;
+  width: 100%;
+}
+.rolltemplate-pf table thead th {
+  background: #000;
+  color: #fff;
+  padding: 0.5em 1em;
+}
+.rolltemplate-pf table tbody {
+  text-align: center;
+}
+.rolltemplate-pf table tbody td {
+  padding: 0.5em 0;
+}
+.rolltemplate-pf table tbody td hr {
+  border-top: 1px solid #ccc;
+  margin: 2px;
+}
+.rolltemplate-pf table tbody .crit {
+  color: #800;
+}
+.rolltemplate-pf table tbody .notes {
+  font-size: 0.8em;
+  font-style: italic;
+}
+.charsheet {
+  background: #fff;
+  height: 100%;
+  width: 9in;
+}
+.charsheet .coreTab table.abilityScores {
+  border-collapse: separate;
+  border-spacing: 0.5em;
+}
+.charsheet .coreTab table.abilityScores th {
+  font-size: 0.75em;
+  padding: 0 1em;
+}
+.charsheet .coreTab table.abilityScores td {
+  text-align: center;
+}
+.charsheet .coreTab table.abilityScores td.blackBox {
+  border-radius: 0.5em;
+}
+.charsheet .coreTab table.abilityScores td.blackBox .longname {
+  font-size: 0.7em;
+  line-height: 0.7em;
+}
+.charsheet .coreTab table.abilityScores td.blackBox .shortname {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+.charsheet .coreTab .attacks {
+  border-collapse: separate;
+  border-spacing: 0 0.5em;
+}
+.charsheet .coreTab .attacks .atkAbility {
+  display: inline-block;
+  position: relative;
+}
+.charsheet .coreTab .attacks .atkAbility select {
+  font-size: 0.6em;
+  height: 2.5em;
+  line-height: 1em;
+  padding: 1px;
+  position: absolute;
+  width: 4em;
+}
+.charsheet .coreTab .attacks .head label {
+  font-size: 0.75em;
+  line-height: 1em;
+  margin-bottom: 0;
+  width: 1in;
+}
+.charsheet .coreTab .attacks .body .blackBox {
+  border-radius: 0.5em;
+  width: 2in;
+}
+.charsheet .coreTab .attacks .body .blackBox input {
+  background: #000;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  width: 1.8in;
+}
+.charsheet .coreTab .attacks .body .labelledBoxH {
+  vertical-align: middle;
+}
+.charsheet .coreTab .attacks .body .rollButton {
+  color: #fff;
+  font-family: dicefontd20;
+  font-size: 0.5in;
+  font-weight: normal;
+  line-height: 0.5in;
+}
+.charsheet .coreTab .attacks .mathOperator {
+  margin-bottom: 0;
+}
+.charsheet .coreTab table.savingThrows {
+  border-collapse: separate;
+  border-spacing: 0 0.5em;
+}
+.charsheet .coreTab table.savingThrows th {
+  font-size: 0.75em;
+}
+.charsheet .coreTab table.savingThrows td {
+  text-align: center;
+}
+.charsheet .coreTab table.savingThrows td.blackBox {
+  border-radius: 0.5em;
+}
+.charsheet .coreTab table.savingThrows td.blackBox .abilityName {
+  font-size: 0.7em;
+  line-height: 0.7em;
+}
+.charsheet .coreTab table.savingThrows td.blackBox .saveName {
+  font-size: 1.5em;
+}
+.charsheet .coreTab table.savingThrows .mathOperator {
+  margin-bottom: 0;
+}
+.charsheet input {
+  border: none;
+  box-shadow: none;
+}
+.charsheet input[type=number]::-webkit-inner-spin-button,
+.charsheet input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.charsheet select {
+  box-shadow: none;
+  height: auto;
+  line-height: 18px;
+  margin-bottom: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.charsheet textarea {
+  background: linear-gradient(to bottom, transparent, transparent 17px, #000);
+  background-attachment: local;
+  background-size: 1px 18px;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  resize: none;
+}
+.charsheet .fieldBox {
+  background: #000;
+  border: solid 1px #000;
+  display: inline-block;
+  position: relative;
+}
+.charsheet .fieldBox label {
+  position: absolute;
+  font-size: 0.75em;
+  line-height: 0.75em;
+  top: 110%;
+}
+.charsheet .fieldBox .inner input {
+  border: none;
+  border-radius: 0
+    display: inline;
+  text-align: center;
+}
+.charsheet .labelledAbove {
+  display: inline-block;
+}
+.charsheet .labelledAbove label {
+  font-size: 0.8em;
+  margin-bottom: 0;
+  padding-top: 0.5em;
+}
+.charsheet .labelledBoxH {
+  background: #000;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  display: inline-block;
+  overflow: hidden;
+}
+.charsheet .labelledBoxH > label {
+  background: #000;
+  color: #fff;
+  display: inline;
+  font-weight: bold;
+  padding: 0 0.25em;
+  vertical-align: middle;
+}
+.charsheet .labelledBoxH > .inner {
+  background: #fff;
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+}
+.charsheet .labelledBoxH > .inner > * {
+  vertical-align: middle;
+}
+.charsheet .labelledBoxH > .inner .fraction {
+  background: #fff;
+  display: inline-block;
+}
+.charsheet .labelledBoxH > .inner .fraction input {
+  border: none;
+  display: inline;
+}
+.charsheet .labelledBoxV {
+  background: #000;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  display: inline-block;
+  overflow: hidden;
+}
+.charsheet .labelledBoxV > label {
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.charsheet .labelledBoxV > .inner {
+  background: #fff;
+  text-align: center;
+  width: 100%;
+}
+.charsheet .labelledBoxV > .inner input {
+  text-align: center;
+  width: 100%;
+}
+.charsheet .labelledBoxV > .inner .fraction {
+  background: #fff;
+  display: inline-block;
+}
+.charsheet .labelledBoxV > .inner .fraction input {
+  border: none;
+  display: inline;
+}
+.charsheet .labelledUnderlined {
+  display: inline-block;
+  margin-bottom: 1em;
+  min-width: 0.45in;
+  position: relative;
+}
+.charsheet .labelledUnderlined label {
+  position: absolute;
+  font-size: 0.75em;
+  line-height: 0.75em;
+  top: 110%;
+}
+.charsheet .labelledUnderlined .inner {
+  border-bottom: solid 1px #000;
+  width: 100%;
+}
+.charsheet .labelledUnderlined .inner input {
+  border: none;
+  border-radius: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+.charsheet .labelledUnderlined .inner select {
+  border: none;
+  border-radius: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+.charsheet .labelledUnderlined .inner .readOnlyBox {
+  padding: 0;
+  padding-top: initial;
+  width: 100%;
+}
+.charsheet .mathOperator {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.charsheet .readOnlyBox {
+  background: #ddd;
+  display: inline-block;
+  padding: 4px;
+  width: 3.5em;
+}
+.charsheet .gearTab .mundaneGear {
+  float: right;
+  width: 35%;
+}
+.charsheet .gearTab .mundaneGear .money {
+  text-align: center
+      width: 100%;
+}
+.charsheet .gearTab .mundaneGear .money .labelledBoxV input {
+  width: 0.6in;
+}
+.charsheet .gearTab .specialGear {
+  float: left;
+  width: 60%;
+}
+.charsheet .magicTab .spellLevel > .head {
+  height: 0.4in;
+}
+.charsheet .magicTab .spellLevel > .head h3 {
+  float: left;
+}
+.charsheet .magicTab .spell.card .name {
+  vertical-align: top;
+  width: 2.3in;
+}
+.charsheet .magicTab .spell.card .name input {
+  width: 100%;
+}
+.charsheet .magicTab .spell.card .prepared {
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  position: relative;
+  width: 20px;
+}
+.charsheet .magicTab .spell.card .prepared div,
+.charsheet .magicTab .spell.card .prepared input {
+  background: #000;
+  border: solid 1px #ccf;
+  border-radius: 10px;
+  color: #ccf;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  vertical-align: middle;
+  width: 100%;
+}
+.charsheet .magicTab .spell.card .prepared input {
+  opacity: 0;
+  z-index: 1;
+}
+.charsheet .magicTab .spell.card .prepared input:checked + div {
+  background: #ccf;
+  color: #000;
+  opacity: 1;
+}
+.charsheet .magicTab .spell.card .school {
+  float: right;
+  width: 1.1in;
+}
+.charsheet .magicTab .spell.card .school select {
+  border-radius: 0;
+}
+.charsheet .skillsTab .skillsBody .skill .name.blackBox {
+  width: 2in;
+}
+.charsheet .skillsTab .skillsBody .skill .name.blackBox .labelledUnderlined {
+  margin: 0;
+}
+.charsheet .skillsTab .skillsBody .skill .name.blackBox .labelledUnderlined input {
+  background: #000;
+  color: #fff;
+  padding: 0;
+}
+.charsheet .skillsTab .skillsHead label {
+  font-size: 0.7em;
+  padding: 0;
+}
+.charsheet .specialFeatsTab .card .head .level {
+  float: left;
+}
+.charsheet .specialFeatsTab .card .head .uses {
+  float: right;
+}
+.charsheet .specialFeatsTab .card.trait .head .name {
+  width: 100%;
+}
+.charsheet .specialFeatsTab .card.trait .head .name input {
+  width: 100%;
+}
+.charsheet .tabsContainer {
+  position: relative;
+}
+.charsheet .tabsContainer .tab {
+  display: inline-block;
+  margin-left: 1em;
+}
+.charsheet .tabsContainer .tab > input {
+  height: 0.1px;
+  opacity: 0;
+  position: absolute;
+  width: 0.1px;
+}
+.charsheet .tabsContainer .tab > input:checked ~ .tabPanel {
+  display: block;
+}
+.charsheet .tabsContainer .tab > input:checked ~ label {
+  background: #000;
+}
+.charsheet .tabsContainer .tab > label {
+  background: #447;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  color: #fff;
+  font-style: italic;
+  font-weight: bold;
+  height: 1.4em;
+  padding: 0.2em 1em;
+  -webkit-clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+.charsheet .tabsContainer .tab > .tabPanel {
+  background: #fff;
+  border-radius: 1em;
+  border-bottom: solid 2px #000;
+  border-top: solid 2px #000;
+  display: none;
+  left: 0;
+  padding: 1em;
+  position: absolute;
+  top: 2em;
+  width: 95%;
+}
+.charsheet table thead th {
+  line-height: 1em;
+}
+.charsheet table tbody td.blackBox {
+  display: table-cell;
+}
+.charsheet .blackBox {
+  background: #000;
+  border-radius: 0.5em;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  overflow: hidden;
+  padding: 0.5em;
+  text-align: center;
+  vertical-align: middle;
+}
+.charsheet .blackBox .longname {
+  font-size: 0.7em;
+  line-height: 0.7em;
+}
+.charsheet .blackBox .shortname {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+.charsheet .blackBox .rollButton {
+  position: relative;
+}
+.charsheet .blackBox .rollButton button {
+  background: #fff;
+  border: none;
+  color: #fff;
+  height: 200%;
+  left: -50%;
+  opacity: 0;
+  position: absolute;
+  top: -50%;
+  transition: opacity 1s;
+  width: 200%;
+}
+.charsheet .blackBox .rollButton button:hover {
+  opacity: 0.5;
+}
+.charsheet .card {
+  border: solid 1px;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+.charsheet .card .body textarea {
+  height: 1.5em;
+  resize: vertical;
+}
+.charsheet .card .head {
+  background: #000;
+  height: 2em;
+}
+.charsheet .card .head .labelledBoxH {
+  border-radius: 0;
+  height: 1.75em;
+}
+.charsheet .card .head .labelledBoxH select {
+  border: none;
+  border-radius: 0;
+  height: 1.75em;
+  padding: 0;
+}
+.charsheet .card .head .name {
+  display: inline-block;
+}
+.charsheet .card .head .name input {
+  background: #000;
+  border-radius: 0;
+  color: #fff;
+  vertical-align: top;
+  width: 2in;
+}
+.charsheet .card .body {
+  background: #fff;
+  margin: 0.25em 0.5em;
+}
+.charsheet .centeredH {
+  text-align: center;
+}
+.charsheet .centeredV > * {
+  vertical-align: middle;
+}
+.charsheet .floatLeft {
+  float: left;
+}
+.charsheet .floatRight {
+  float: right;
+}
+.charsheet .inlineBlock {
+  display: inline-block;
+}
+.charsheet .pfLogo {
+  background-image: url("http://paizo.com/image/content/Logos/PathfinderRPGLogo_500.jpeg");
+  background-size: 100%;
+  display: inline-block;
+  height: 1in;
+  width: 4in;
+}
+.charsheet .topStats {
+  display: inline-block;
+  width: 4.5in;
+}

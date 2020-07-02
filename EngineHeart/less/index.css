@@ -1,0 +1,439 @@
+.rolltemplate-eh table {
+  background: #fff;
+  border: solid 2px #000;
+  border-collapse: separate;
+  border-radius: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.rolltemplate-eh table thead th {
+  background: #000;
+  color: #fff;
+  padding: 0.5em 1em;
+}
+.rolltemplate-eh table tbody {
+  text-align: center;
+}
+.rolltemplate-eh table tbody td {
+  padding: 0.5em 0;
+}
+.rolltemplate-eh table tbody td hr {
+  border-top: 1px solid #000;
+  margin: 2px;
+}
+.rolltemplate-eh table tbody .crit {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.rolltemplate-eh table tbody .notes {
+  font-size: 0.8em;
+  font-style: italic;
+}
+.charsheet {
+  background: #fff;
+  height: 100%;
+  width: 9in;
+}
+.charsheet input {
+  border: none;
+  box-shadow: none;
+}
+.charsheet input[type=number]::-webkit-inner-spin-button,
+.charsheet input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.charsheet select {
+  box-shadow: none;
+  height: auto;
+  line-height: 18px;
+  margin-bottom: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.charsheet textarea {
+  background: linear-gradient(to bottom, transparent, transparent 17px, #000);
+  background-attachment: local;
+  background-size: 1px 18px;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  resize: none;
+}
+.charsheet .bubble {
+  display: inline-block;
+  height: 50px;
+  position: relative;
+  width: 48px;
+}
+.charsheet .bubble label {
+  bottom: -16px;
+  font-size: 10px;
+  left: 50%;
+  padding: 0;
+  position: absolute;
+  transform: translateX(-50%);
+  width: auto;
+}
+.charsheet .bubble .inner {
+  border: solid 3px black;
+  border-radius: 32px;
+  height: 32px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  transform: translateX(-50%);
+  width: 32px;
+}
+.charsheet .bubble .inner input {
+  background: transparent;
+  line-height: 32px;
+  max-height: 32px;
+  max-width: 32px;
+  text-align: center;
+  vertical-align: middle;
+}
+.charsheet .bubble .inner .readOnly {
+  background: #ccc;
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+}
+.charsheet .fieldBox {
+  background: #000;
+  border: solid 1px #000;
+  display: inline-block;
+  position: relative;
+}
+.charsheet .fieldBox label {
+  position: absolute;
+  font-size: 0.75em;
+  line-height: 0.75em;
+  top: 110%;
+}
+.charsheet .fieldBox .inner input {
+  border: none;
+  border-radius: 0
+    display: inline;
+  text-align: center;
+}
+.charsheet .labelledAbove {
+  display: inline-block;
+}
+.charsheet .labelledAbove label {
+  font-size: 0.8em;
+  margin-bottom: 0;
+  padding-top: 0.5em;
+}
+.charsheet .labelledBoxH {
+  background: #000;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  display: inline-block;
+  overflow: hidden;
+}
+.charsheet .labelledBoxH > label {
+  background: #000;
+  color: #fff;
+  display: inline;
+  font-weight: bold;
+  padding: 0 0.25em;
+  vertical-align: middle;
+}
+.charsheet .labelledBoxH > .inner {
+  background: #fff;
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+}
+.charsheet .labelledBoxH > .inner > * {
+  vertical-align: middle;
+}
+.charsheet .labelledBoxH > .inner .fraction {
+  background: #fff;
+  display: inline-block;
+}
+.charsheet .labelledBoxH > .inner .fraction input {
+  border: none;
+  display: inline;
+}
+.charsheet .labelledBoxV {
+  background: #000;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  display: inline-block;
+  overflow: hidden;
+}
+.charsheet .labelledBoxV > label {
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.charsheet .labelledBoxV > .inner {
+  background: #fff;
+  text-align: center;
+  width: 100%;
+}
+.charsheet .labelledBoxV > .inner input {
+  text-align: center;
+  width: 100%;
+}
+.charsheet .labelledBoxV > .inner .fraction {
+  background: #fff;
+  display: inline-block;
+}
+.charsheet .labelledBoxV > .inner .fraction input {
+  border: none;
+  display: inline;
+}
+.charsheet .labelledLeft {
+  display: inline-block;
+  margin-bottom: 1em;
+  min-width: 0.45in;
+  position: relative;
+}
+.charsheet .labelledLeft label {
+  display: inline-block;
+  margin-bottom: 0;
+  padding-right: 2px;
+  width: auto;
+  vertical-align: bottom;
+}
+.charsheet .labelledLeft .inner {
+  border-bottom: solid 2px #000;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.charsheet .labelledLeft .inner input {
+  background: transparent;
+  padding: 0;
+  transform: translateY(2px);
+}
+.charsheet .labelledUnderlined {
+  display: inline-block;
+  margin-bottom: 1em;
+  min-width: 0.45in;
+  position: relative;
+}
+.charsheet .labelledUnderlined label {
+  position: absolute;
+  font-size: 0.75em;
+  line-height: 0.75em;
+  top: 110%;
+}
+.charsheet .labelledUnderlined .inner {
+  border-bottom: solid 1px #000;
+  width: 100%;
+}
+.charsheet .labelledUnderlined .inner input {
+  border: none;
+  border-radius: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+.charsheet .labelledUnderlined .inner select {
+  border: none;
+  border-radius: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+.charsheet .labelledUnderlined .inner .readOnlyBox {
+  padding: 0;
+  padding-top: initial;
+  width: 100%;
+}
+.charsheet .mathOperator {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.charsheet .column {
+  display: inline-block;
+}
+.charsheet .inlineBlock {
+  display: inline-block;
+}
+.charsheet .attributes {
+  margin-bottom: 32px;
+  width: 100%;
+}
+.charsheet .attributes .attribute {
+  position: relative;
+}
+.charsheet .attributes .attribute button {
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  z-index: 10;
+}
+.charsheet .attributes .attribute > label {
+  position: absolute;
+  left: 55%;
+  top: 15%;
+  width: auto;
+}
+.charsheet .attributes .attribute > label::before {
+  content: "0";
+  font-family: dicefontd10;
+  font-size: 32px;
+  vertical-align: middle;
+}
+.charsheet .attributes .column {
+  vertical-align: top;
+  width: 33%;
+}
+.charsheet .attrsHeader {
+  margin-bottom: 10px;
+}
+.charsheet .attrsHeader h2 {
+  display: inline-block;
+  line-height: 1em;
+  max-width: 2in;
+  vertical-align: middle;
+}
+.charsheet .attrsHeader .boxedIcon {
+  display: inline-block;
+  height: 60px;
+  vertical-align: middle;
+  width: 60px;
+}
+.charsheet .attrsHeader .boxedIcon.iconChassis {
+  background: url("https://raw.githubusercontent.com/Cazra/roll20-character-sheets/engineHeart/EngineHeart/img/iconChassis.png");
+}
+.charsheet .attrsHeader .boxedIcon.iconCrux {
+  background: url("https://raw.githubusercontent.com/Cazra/roll20-character-sheets/engineHeart/EngineHeart/img/iconCrux.png");
+}
+.charsheet .attrsHeader .boxedIcon.iconIntelligence {
+  background: url("https://raw.githubusercontent.com/Cazra/roll20-character-sheets/engineHeart/EngineHeart/img/iconIntelligence.png");
+}
+.charsheet .attrsHeader .boxedIcon.iconMovement {
+  background: url("https://raw.githubusercontent.com/Cazra/roll20-character-sheets/engineHeart/EngineHeart/img/iconMovement.png");
+}
+.charsheet .attrsHeader .boxedIcon.iconPhysicalInteraction {
+  background: url("https://raw.githubusercontent.com/Cazra/roll20-character-sheets/engineHeart/EngineHeart/img/iconPhysicalInteraction.png");
+}
+.charsheet .attrsHeader .boxedIcon.iconThresholds {
+  background: url("https://raw.githubusercontent.com/Cazra/roll20-character-sheets/engineHeart/EngineHeart/img/iconThresholds.png");
+}
+.charsheet .featuresDefects {
+  margin-bottom: 32px;
+}
+.charsheet .featuresDefects table {
+  font-size: 10px;
+  margin-left: 8px;
+  width: 100%;
+}
+.charsheet .featuresDefects table th:nth-child(1) {
+  width: 30%;
+}
+.charsheet .featuresDefects table th:nth-child(2) {
+  width: 10%;
+}
+.charsheet .featuresDefects .feature input,
+.charsheet .featuresDefects .defect input {
+  border-bottom: solid 1px black;
+  border-radius: 0;
+  padding: 0;
+  vertical-align: top;
+}
+.charsheet .featuresDefects .feature textarea,
+.charsheet .featuresDefects .defect textarea {
+  height: 1.5em;
+  margin-top: 1px;
+  resize: vertical;
+  vertical-align: top;
+}
+.charsheet .featuresDefects .feature input:nth-child(1),
+.charsheet .featuresDefects .defect input:nth-child(1) {
+  width: 30%;
+}
+.charsheet .featuresDefects .feature input:nth-child(2),
+.charsheet .featuresDefects .defect input:nth-child(2) {
+  width: 10%;
+}
+.charsheet .featuresDefects .feature textarea:nth-child(3),
+.charsheet .featuresDefects .defect textarea:nth-child(3) {
+  width: 55%;
+}
+.charsheet .secondaryAttrs {
+  margin-bottom: 32px;
+  width: 100%;
+}
+.charsheet .secondaryAttrs .attribute {
+  position: relative;
+}
+.charsheet .secondaryAttrs .attribute > label {
+  position: absolute;
+  left: 55%;
+  margin-left: 1.7em;
+  text-indent: -1.7em;
+  top: 15%;
+  width: auto;
+}
+.charsheet .secondaryAttrs .attribute.threshold > label {
+  left: 37%;
+}
+.charsheet .secondaryAttrs .column {
+  vertical-align: top;
+  width: 33%;
+}
+.charsheet .secondaryAttrs .rollable {
+  position: relative;
+}
+.charsheet .secondaryAttrs .rollable button {
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  z-index: 10;
+}
+.charsheet .secondaryAttrs .rollable .attribute > label::before {
+  content: "0";
+  font-family: dicefontd10;
+  font-size: 32px;
+  vertical-align: middle;
+}
+.charsheet .top {
+  width: 100%;
+}
+.charsheet .top .column.bio {
+  width: 80%;
+}
+.charsheet .top .column.bio > div {
+  width: 100%;
+}
+.charsheet .top .column.bio > div .labelledLeft {
+  display: inline-table;
+}
+.charsheet .top .column.bio > div .labelledLeft label {
+  display: table-cell;
+  white-space: nowrap;
+  width: 1px;
+}
+.charsheet .top .column.bio > div .labelledLeft .inner {
+  display: table-cell;
+}
+.charsheet .top .column.bio > div .labelledLeft .inner input {
+  width: 100%;
+}
+.charsheet .top .column.points {
+  margin-left: 20px;
+  transform: scale(1.5);
+  width: 10%;
+}
+.charsheet .twoColumns .column {
+  vertical-align: top;
+  width: 49%;
+}

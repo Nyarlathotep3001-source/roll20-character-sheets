@@ -222,7 +222,6 @@ input[type=radio].sheet-tab-button.sheet-spells + span {
   border-left: 0px;
   border-right: 0px;
   background: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -326,7 +325,6 @@ input[type=radio].sheet-tab-button.sheet-spells + span {
   line-height: 12px;
   background-image: none;
   text-shadow: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   padding: 0px;
   margin: 0px;
@@ -356,7 +354,6 @@ button[type=roll] * {
 .sheet-attr-container input {
   border: none;
   background: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -386,7 +383,7 @@ button[type=roll] * {
 .sheet-attr-mod input {
   text-align: center;
   /*    width: 100%;
-    height: 20px;*/
+      height: 20px;*/
   font-size: 20px;
   margin: 0px;
   padding: 0px;
@@ -478,7 +475,6 @@ button[type=roll] * {
   font-size: 20px;
   border: none;
   background: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -526,7 +522,6 @@ button[type=roll] * {
   overflow: hidden;
   word-wrap: break-word;
   white-space: nowrap;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   text-align: left; }
 
@@ -680,7 +675,6 @@ button[type=roll] * {
   border-left: 0px;
   border-right: 0px;
   background: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -805,7 +799,6 @@ button[type=roll] * {
   border: none;
   background-image: none;
   text-shadow: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   padding: 0px;
   margin: 0px;
@@ -843,7 +836,6 @@ button[type=roll] * {
   margin-top: 0px;
   padding: 4px;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   vertical-align: bottom;
   white-space: nowrap; }
@@ -899,8 +891,6 @@ button[type=roll] * {
 .sheet-traits .sheet-options-flag + span,
 .sheet-equipment .sheet-inventorysubflag + span,
 .sheet-header .sheet-options-flag + span {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   position: absolute;
   top: 0px;
@@ -949,8 +939,6 @@ button[type=roll] * {
 .sheet-equipment .sheet-inventorysubflag:checked + span,
 .sheet-header .sheet-options-flag:checked + span {
   color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex; }
 
 .sheet-spell:hover .sheet-details-flag + span,
@@ -966,8 +954,6 @@ button[type=roll] * {
 .sheet-item:hover .sheet-inventorysubflag + span,
 .sheet-pc .sheet-trait:hover .sheet-output,
 .sheet-pc .sheet-header:hover .sheet-options-flag + span {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex; }
 
 .sheet-pc .sheet-header .sheet-options-flag {
@@ -1149,7 +1135,6 @@ button[type=roll] * {
   font-size: 20px;
   border: none;
   background: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: textfield;
@@ -1324,7 +1309,6 @@ button[type=roll] * {
   border-bottom: 1px solid #D3D3D3;
   background-image: none;
   text-shadow: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   padding: 0px;
   margin: 0px;
@@ -1388,7 +1372,6 @@ span.sheet-spellconcentration {
   border: none;
   background-image: none;
   text-shadow: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   padding: 0px;
   margin: 0px;
@@ -1402,7 +1385,6 @@ span.sheet-spellconcentration {
   margin-left: 4px;
   display: inline;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 220px; }
@@ -1418,7 +1400,6 @@ span.sheet-spellconcentration {
   border: medium none;
   color: white !important;
   background: none;
-  -webkit-box-shadow: none;
   box-shadow: none; }
 
 .repcontrol .btn:focus {
@@ -1526,7 +1507,6 @@ span.sheet-spellconcentration {
   border-left: 0px;
   border-right: 0px;
   background: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1696,7 +1676,6 @@ span.sheet-spellconcentration {
   margin: 15px 10px;
   padding: 0;
   overflow-x: hidden;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis; }
 
 .sheet-spell .sheet-details span:not(.sheet-innate) {
@@ -2253,7 +2232,6 @@ By Miguel
   border-left: 0px;
   border-right: 0px;
   background: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2297,7 +2275,6 @@ By Miguel
   border-left: 0px;
   border-right: 0px;
   background: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2310,7 +2287,6 @@ By Miguel
 .sheet-npc .sheet-reaction input {
   border: none;
   background: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2410,7 +2386,6 @@ By Miguel
 .sheet-npc button[type=roll] input {
   border: none;
   background: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2483,7 +2458,6 @@ By Miguel
   min-height: 36px;
   border: none;
   padding: 0px;
-  -webkit-box-shadow: none;
   box-shadow: none; }
 
 .sheet-npc .sheet-actiontitle {
@@ -2604,7 +2578,6 @@ By Miguel
   margin-bottom: 0px;
   padding: 0px;
   text-shadow: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   height: 36px;
   min-height: 36px;
@@ -2986,7 +2959,6 @@ By Miguel
   height: 27px;
   margin-right: -4px;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis; }
 
 .charsheet .sheet-hlabel-container .sheet-multiclass-display-level {
@@ -3059,7 +3031,6 @@ By Miguel
 .sheet-monster_confirm_flag[value="1"] ~ .sheet-licensecontainer,
 .sheet-mancer_confirm_flag[value="1"] ~ .sheet-licensecontainer {
   opacity: 0.5;
-  -o-transition: opacity .15s ease-in-out;
   transition: opacity .15s ease-in-out;
   -moz-transition: opacity .15s ease-in-out;
   -webkit-transition: opacity .15s ease-in-out;
@@ -3147,7 +3118,6 @@ By Miguel
   overflow: hidden;
   word-wrap: break-word;
   white-space: nowrap;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis; }
 
 .sheet-no_events {
@@ -3390,28 +3360,18 @@ By Miguel
  *******************/
 .sheet-charmancer.sheet-container {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -ms-flex-preferred-size: 1 1 100%;
   flex-basis: 1 1 100%;
   position: relative;
   contain: paint; }
 
 .sheet-charmancer .sheet-choices {
-  -webkit-box-flex: 40%;
-  -ms-flex: 40%;
   flex: 40%;
   max-width: 40%;
   padding-right: 1em; }
 
 .sheet-charmancer .sheet-info {
-  -webkit-box-flex: 60%;
-  -ms-flex: 60%;
   flex: 60%;
   position: relative;
   max-width: calc(60% - 2em); }
@@ -3439,8 +3399,6 @@ By Miguel
 
 .sheet-charmancer .sheet-topbar,
 .sheet-charmancer .sheet-leveler-topbar {
-  -webkit-box-flex: 100%;
-  -ms-flex: 100%;
   flex: 100%;
   margin-bottom: 15px; }
 
@@ -3462,16 +3420,10 @@ By Miguel
 
 .sheet-charmancer .sheet-topbar div.sheet-meta-info-container,
 .sheet-charmancer .sheet-leveler-topbar div.sheet-meta-info-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   border: 0;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between; }
 
 .sheet-charmancer .sheet-topbar div.sheet-meta-info-container span,
@@ -3483,7 +3435,6 @@ By Miguel
   display: none; }
 
 .sheet-charmancer .sheet-steps {
-  position: -webkit-sticky;
   position: sticky;
   padding: .5em 0;
   background: #fff;
@@ -3492,28 +3443,16 @@ By Miguel
   border-bottom: 1px dashed #ddd;
   list-style: none;
   list-style-position: inside;
-  -webkit-box-flex: 100%;
-  -ms-flex: 100%;
   flex: 100%;
   margin: 0 0 1em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row;
   flex-flow: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-transform: translateZ(0);
   transform: translateZ(0); }
 
 .sheet-charmancer .sheet-lp-steps {
   width: 100%;
   display: block;
-  -webkit-box-flex: 0;
-  -ms-flex: none;
   flex: none; }
 
 .sheet-charmancer .sheet-lp-steps li {
@@ -3576,22 +3515,17 @@ By Miguel
 
 .sheet-charmancer .sheet-bottombar,
 .sheet-charmancer .sheet-controls {
-  -webkit-box-flex: 100%;
-  -ms-flex: 100%;
   flex: 100%;
   margin-bottom: 1em; }
 
 .sheet-charmancer .sheet-bottombar {
-  position: -webkit-sticky;
   position: sticky;
   bottom: -1px;
   border-top: 1px dashed #ddd;
   padding: .5em 0;
   background: white;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-align: center;
-  -webkit-transform: translateZ(0);
   transform: translateZ(0); }
 
 .sheet-charmancer .sheet-bottombar button {
@@ -3713,7 +3647,6 @@ By Miguel
   color: #7e2d40;
   background: #EFEFEF;
   border-radius: .5em;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: .5em; }
 
@@ -3724,8 +3657,6 @@ By Miguel
   width: 4.5em; }
 
 .sheet-manver .sheet-yes_spells {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex; }
 
 .sheet-charmancer button.sheet-mancer_info,
@@ -3754,14 +3685,10 @@ By Miguel
   background: #EC2127; }
 
 .sheet-charmancer [class^="sheet-abilities_radio"]:not(.sheet-choice) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex; }
 
 .sheet-charmancer span label.sheet-compendium-opt {
   position: relative;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding-right: 0; }
 
@@ -3882,18 +3809,12 @@ By Miguel
   display: block; }
 
 .sheet-charmancer .sheet-choices.sheet-spellslide {
-  -webkit-box-flex: 45%;
-  -ms-flex: 45%;
   flex: 45%;
   max-width: 45%;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .sheet-charmancer .sheet-info.sheet-spellslide {
-  position: -webkit-sticky;
   position: sticky;
-  -webkit-box-flex: 55%;
-  -ms-flex: 55%;
   flex: 55%;
   top: 4em;
   min-height: 50%;
@@ -3910,7 +3831,6 @@ By Miguel
 .sheet-spells-summary .sheet-list {
   width: 85%;
   padding-left: .5em;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .sheet-spells-summary .sheet-list span:not(:last-of-type)::after {
@@ -3956,7 +3876,6 @@ By Miguel
   background-color: #efefef;
   margin: 0;
   width: 100%;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .sheet-charmancer .sheet-spell-holder label .sheet-title {
@@ -3992,13 +3911,9 @@ By Miguel
   margin-left: .3em;
   font-size: 1.3em;
   display: inline-block;
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
   transform: rotate(-90deg); }
 
 .sheet-charmancer .sheet-spell-holder label input:checked ~ .sheet-number::after {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   margin-left: .4em; }
 
@@ -4007,7 +3922,6 @@ By Miguel
   border: 1px solid black;
   border-top: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .sheet-charmancer .sheet-spell-item {
@@ -4089,11 +4003,7 @@ By Miguel
   display: none; }
 
 .sheet-charmancer .sheet-spell-holder .sheet-spellinfo:not(:empty) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 1em; }
 
@@ -4120,8 +4030,6 @@ By Miguel
   display: none; }
 
 .sheet-charmancer .sheet-asi-row .sheet-switch-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex; }
 
 .sheet-charmancer .sheet-asi-row .sheet-switch-tab {
@@ -4157,11 +4065,8 @@ By Miguel
   padding: 1em; }
 
 .sheet-charmancer .sheet-asi-row .sheet-asi .sheet-abilities-holder {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
 .sheet-charmancer .sheet-asi-row .sheet-asi .sheet-abilities-holder div {
@@ -4233,8 +4138,6 @@ By Miguel
   background-color: rgba(232, 232, 232, 0.3); }
 
 .sheet-charmancer .sheet-lp-summary {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   min-height: 200px;
@@ -4255,7 +4158,6 @@ By Miguel
   width: 100%;
   color: white;
   border-bottom: 1px solid black;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: .5em;
   font-size: 1.5em; }
@@ -4275,8 +4177,6 @@ By Miguel
 
 .sheet-charmancer .sheet-lp-summary .sheet-ability-row {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 0;
   font-size: 1.2em; }
@@ -4356,7 +4256,6 @@ div.sheet-globaldisplay {
   padding-right: 4px;
   padding-top: 3px;
   text-align: left;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis; }
 
 div.sheet-globaldisplay span {
@@ -4568,8 +4467,6 @@ div.sheet-globaldisplay span {
   display: inline-block;
   font-family: pictos;
   font-size: 1.5em;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   position: absolute;
   right: .25em;
@@ -4577,8 +4474,6 @@ div.sheet-globaldisplay span {
   z-index: 0; }
 
 .sheet-charmancer .sheet-levels-hp-row .sheet-hpbylevel-toggle:checked ~ span.sheet-collapse {
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   margin-left: .4em; }
 
@@ -4787,10 +4682,7 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container.sheet-pc .sheet-spells .sheet-header .sheet-header-info,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container.sheet-pc .sheet-spells .sheet-header .sheet-header-info {
     background-image: url("https://raw.githubusercontent.com/mperes/Images-for-Roll20-5E-images/master/licensedsheet/SpellBox.svg?sanitize=true");
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -ms-flex-pack: distribute;
     justify-content: space-around; }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container.sheet-pc .sheet-spells .sheet-header .sheet-header-info .sheet-part,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container.sheet-pc .sheet-spells .sheet-header .sheet-header-info .sheet-part {
@@ -4826,7 +4718,7 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) .sheet-attr-container + .sheet-attr-container + .sheet-attr-container,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attr-container + .sheet-attr-container + .sheet-attr-container {
     /* constitution is abbrivated CNS instead of CON
-        because windows has that term reserved */
+    because windows has that term reserved */
     background: url("https://raw.githubusercontent.com/mperes/Images-for-Roll20-5E-images/master/licensedsheet/ability-CNS.svg?sanitize=true"); }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) .sheet-attr-container + .sheet-attr-container + .sheet-attr-container + .sheet-attr-container,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attr-container + .sheet-attr-container + .sheet-attr-container + .sheet-attr-container {
@@ -4902,7 +4794,6 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-saving-throw-container,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-skills-container {
     position: relative;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 5px 5px 15px;
     border: 10px solid black;
@@ -4931,13 +4822,8 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     width: 100% !important;
     margin: 0;
     padding: 10px 8px 0;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between; }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) .sheet-hdice-dsaves-container,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-hdice-dsaves-container {
@@ -5018,7 +4904,6 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-subcontainer {
     --topNotchSize: 7px;
     --bottomNotchSize: 6px;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin-top: 5px;
     width: 49%;
@@ -5030,7 +4915,6 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     border-image-slice: 15 15;
     border-image-width: auto;
     border-image-repeat: round;
-    -webkit-clip-path: polygon(0% var(--topNotchSize), var(--topNotchSize) 0%, calc(100% - var(--topNotchSize)) 0%, 100% var(--topNotchSize), 100% calc(100% - var(--bottomNotchSize)), calc(100% - var(--bottomNotchSize)) 100%, var(--bottomNotchSize) 100%, 0% calc(100% - var(--bottomNotchSize)));
     clip-path: polygon(0% var(--topNotchSize), var(--topNotchSize) 0%, calc(100% - var(--topNotchSize)) 0%, 100% var(--topNotchSize), 100% calc(100% - var(--bottomNotchSize)), calc(100% - var(--bottomNotchSize)) 100%, var(--bottomNotchSize) 100%, 0% calc(100% - var(--bottomNotchSize))); }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) .sheet-subcontainer .sheet-row-container input[type="checkbox"],
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-subcontainer .sheet-row-container input[type="checkbox"] {
@@ -5060,7 +4944,6 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-traits,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-equipment,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-exhaustion {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
     margin-top: 10px;
@@ -5091,7 +4974,6 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     margin-top: 5px; }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) .sheet-tool_proficiencies,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-tool_proficiencies {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
     margin-top: 5px;
@@ -5107,7 +4989,6 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) .sheet-pibf,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-pibf {
     position: relative;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
     min-height: 6em;
@@ -5208,7 +5089,6 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     width: 68px; }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) .sheet-bio .sheet-textbox,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-bio .sheet-textbox {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
     margin-top: 10px;
@@ -5268,15 +5148,9 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     width: unset; }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-npc_toggle[value="1"] ~ .sheet-npc,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-npc_toggle[value="1"] ~ .sheet-npc {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -ms-flex-flow: wrap;
     flex-flow: wrap;
     margin-bottom: 2%;
     min-width: 100%; }
@@ -5293,20 +5167,14 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     width: 100%; }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-npc_toggle[value="1"] + .sheet-npcspellcastingflag[value="1"] ~ .sheet-pc .sheet-page.sheet-spells .sheet-body,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-npc_toggle[value="1"] + .sheet-npcspellcastingflag[value="1"] ~ .sheet-pc .sheet-page.sheet-spells .sheet-body {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -ms-flex-flow: wrap;
     flex-flow: wrap;
     margin-top: 0px;
     max-width: 95%;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content; }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-npc_toggle[value="1"] + .sheet-npcspellcastingflag[value="1"] ~ .sheet-pc .sheet-page.sheet-spells .sheet-body .sheet-col,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-npc_toggle[value="1"] + .sheet-npcspellcastingflag[value="1"] ~ .sheet-pc .sheet-page.sheet-spells .sheet-body .sheet-col {
     background: #fff;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
     margin-right: 0.5em;
@@ -5317,7 +5185,6 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-npc_toggle[value="1"] ~ .sheet-npc .sheet-actions,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-npc_toggle[value="1"] ~ .sheet-npc .sheet-stat-block {
     background: #fff;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin-right: 2em;
     max-width: 30%;
@@ -5336,17 +5203,11 @@ div.sheet-charmancer div.sheet-licensedsheet-flag {
 div.sheet-charmancer.sheet-licensedsheet .sheet-logos,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-logos,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-logos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: column;
   flex-flow: column;
   margin-bottom: 1em; }
-
 div.sheet-charmancer.sheet-licensedsheet .sheet-charmancer-logo,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-charmancer-logo,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-charmancer-logo {
@@ -5355,12 +5216,9 @@ div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-charmance
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 70%;
   height: 5em; }
-
 div.sheet-charmancer.sheet-licensedsheet .sheet-compendium-logo,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-compendium-logo,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-compendium-logo {
@@ -5369,39 +5227,29 @@ div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-compendiu
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 50%;
   height: 3em; }
-
 div.sheet-charmancer.sheet-licensedsheet .sheet-expansions,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-expansions,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-expansions {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin: 1em 0;
   padding: 1em;
   background: #eee;
   border-radius: .5em; }
-
 div.sheet-charmancer.sheet-licensedsheet .sheet-expansions p,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-expansions p,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-expansions p {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%; }
-
 div.sheet-charmancer.sheet-licensedsheet .sheet-meta-info-container,
 div.sheet-charmancer.sheet-licensedsheet .sheet-summary-container,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-meta-info-container,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-summary-container,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-meta-info-container,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-summary-container {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100% !important;
   padding: .5em;
@@ -5410,23 +5258,19 @@ div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-summary-c
   border-image-slice: 20 32 !important;
   border-image-width: auto !important;
   border-image-repeat: round !important; }
-
 div.sheet-charmancer.sheet-licensedsheet .sheet-info .sheet-compendium-page,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-info .sheet-compendium-page,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-info .sheet-compendium-page {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 10px solid black;
   border-image-source: url("https://raw.githubusercontent.com/mperes/Images-for-Roll20-5E-images/master/licensedsheet/DnD-border.png");
   border-image-slice: 20 32;
   border-image-width: auto;
   border-image-repeat: round; }
-
 div.sheet-charmancer.sheet-licensedsheet .sheet-row,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-row,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-row {
   border: 0 !important; }
-
 div.sheet-charmancer.sheet-licensedsheet .sheet-row + .sheet-row::before,
 div.sheet-charmancer.sheet-licensedsheet .sheet-holder .sheet-row::before,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-row + .sheet-row::before,
@@ -5440,59 +5284,36 @@ div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-holder .s
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   border-left: 300px solid #7e2d40; }
-
 div.sheet-charmancer.sheet-licensedsheet .sheet-row .sheet-row::before,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-row .sheet-row::before,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-row .sheet-row::before {
   border: 0;
   margin: 0; }
-
 div.sheet-charmancer.sheet-licensedsheet .sheet-row div.sheet-row,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-row div.sheet-row,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-row div.sheet-row {
   padding: 0.1em 1.5em 0.1em 0;
   margin-left: 0; }
-
 div.sheet-charmancer.sheet-licensedsheet .sheet-topbar,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-topbar,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-topbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: column;
   flex-flow: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between; }
-
 div.sheet-charmancer.sheet-licensedsheet .sheet-topbar .sheet-topbar-container,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-topbar .sheet-topbar-container,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-topbar .sheet-topbar-container {
   width: 100%;
   border: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between; }
-
 div.sheet-charmancer.sheet-licensedsheet .sheet-attr-container,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-attr-container,
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-attr-container {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -ms-flex-flow: column-reverse;
   flex-flow: column-reverse;
   min-width: 15%;
-  display: -webkit-inline-box !important;
-  display: -ms-inline-flexbox !important;
   display: inline-flex !important;
-  -ms-flex-line-pack: space-evenly;
   align-content: space-evenly; }
-
 div.sheet-charmancer.sheet-licensedsheet .sheet-summary:nth-child(even),
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-summary:nth-child(even),
 div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-summary:nth-child(even) {
@@ -5624,10 +5445,7 @@ div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ .sheet-summary:n
 .charsheet input.sheet-licensedsheet[value="1"] ~ .sheet-mancer_confirm {
   position: absolute !important;
   padding: 2em 0 !important;
-  min-height: -webkit-max-content;
-  min-height: -moz-max-content;
   min-height: max-content;
-  -webkit-box-shadow: 0 0 50px #000;
   box-shadow: 0 0 50px #000;
   border: 2px solid #000 !important;
   border-radius: .5em; }

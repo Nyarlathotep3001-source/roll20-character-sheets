@@ -11,9 +11,7 @@ button {
   text-overflow: ellipsis; }
   button:before {
     display: none; }
-  button:focus > h3,
-  button:hover > h3,
-  button:active > h3 {
+  button:focus > h3, button:hover > h3, button:active > h3 {
     color: #bbb;
     text-shadow: 1px 1px 2px #000, 0 0 25px #bbb, 0 0 5px #bbb; }
   button[type='roll'], button[type='action'] {
@@ -48,7 +46,6 @@ input[type="number"], input[type="text"] {
   padding: 1px 2px;
   height: 100%;
   width: 100% !important; }
-
 input[disabled='true'] {
   background-color: #77be7924;
   cursor: not-allowed; }
@@ -110,11 +107,11 @@ div.sheet-navigation {
       background-color: #dcdcdc;
       border-bottom-color: #fff; }
   div.sheet-navigation input:nth-of-type(1), div.sheet-navigation span:nth-of-type(1) {
-    grid-area: 1 / 1 / 1; }
+    grid-area: 1 / 1 / 1 / 1; }
   div.sheet-navigation input:nth-of-type(2), div.sheet-navigation span:nth-of-type(2) {
-    grid-area: 1 / 2 / 0.5; }
+    grid-area: 1 / 2 / 1 / 2; }
   div.sheet-navigation input:nth-of-type(3), div.sheet-navigation span:nth-of-type(3) {
-    grid-area: 1 / 3 / 0.33333; }
+    grid-area: 1 / 3 / 1 / 3; }
 
 .sheet-small-font {
   font-size: 0.5em; }
@@ -278,7 +275,6 @@ div.sheet-dicelabel {
 
 div.sheet-health h1, div.sheet-health h2 {
   text-align: center; }
-
 div.sheet-health div.sheet-header {
   grid-template-columns: 1em 2fr 1fr;
   text-align: center; }
@@ -287,7 +283,6 @@ div.sheet-health div.sheet-header {
   div.sheet-health div.sheet-header h2[data-i18n='Damage Threshold'] {
     grid-column: 3;
     line-height: inherit; }
-
 div.sheet-health div.sheet-body {
   grid-template-columns: 1em 2fr 1fr; }
   div.sheet-health div.sheet-body h3 {
@@ -312,10 +307,8 @@ div.sheet-health div.sheet-body {
     grid-column: 1 / 4 / 1 / 4; }
   div.sheet-health div.sheet-body div.sheet-damage-threshold input {
     text-align: center; }
-
 div.sheet-health div.sheet-viral h2[data-i18n='Symptoms'] {
   text-align: left; }
-
 div.sheet-health div.sheet-viral input[type="checkbox"] {
   -webkit-appearance: initial;
   appearance: initial;
@@ -336,11 +329,9 @@ div.sheet-health div.sheet-viral input[type="checkbox"] {
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%); }
-
 div.sheet-health div.sheet-viral div.sheet-virus-checkboxes {
   display: block;
   text-align: center; }
-
 div.sheet-health div.sheet-pysche {
   grid-template-columns: 4fr 3fr 1fr 2fr 1fr 3fr; }
   div.sheet-health div.sheet-pysche h1 {
@@ -371,19 +362,16 @@ div.sheet-training-value h1 {
   grid-column: 1 / 2;
   font-size: 1.8em;
   text-align: center; }
-
 div.sheet-training-value div.sheet-red-kits {
   grid-template-columns: 1fr 1fr; }
   div.sheet-training-value div.sheet-red-kits img {
     margin-left: 25%; }
-
 div.sheet-training-value div.sheet-green-kits {
   grid-template-columns: 1fr 1fr 1fr; }
   div.sheet-training-value div.sheet-green-kits h2 {
     font-size: 0.8em; }
   div.sheet-training-value div.sheet-green-kits img {
     margin-left: 20%; }
-
 div.sheet-training-value div.sheet-kits {
   margin-bottom: 5%; }
   div.sheet-training-value div.sheet-kits h2 {

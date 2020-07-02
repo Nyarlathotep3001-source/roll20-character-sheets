@@ -1,0 +1,51 @@
+<script>
+   var main_dice_pool = {"affiliation":{"solo":"d8"},"distinction":{"dist2":"d4"},"role":{"forensics":"d12"}};
+    var resource_dice_pool = {"res1a":"d10","res2b":"d8","res3a":"d6","res4b":"d6"};	
+    //main_dice_pool = JSON.parse(getAttrByName(character.id, 'strength'));
+    //resource_dice_pool = JSON.parse(getAttrByName(character.id, 'strength'));
+    var plot_points = 0;
+    var main_sort_roll= [];
+    for (var value of Object.values(main_dice_pool)){
+        for (var key of Object.keys(value)) {
+            //main_sort_roll.push([key,randomInteger(value[key].substr(1))])
+           main_sort_roll.push([key,value[key].substr(1)]);
+        }   
+    }
+
+    main_sort_roll.sort(function(a, b) { return b[1] -a[1];});
+    main_kept_dice = main_sort_roll.slice(0, plot_points+2);
+    var mkd = main_kept_dice.join(" ").replace(/,/g,": ");
+    main_unkept_dice = main_sort_roll.slice(plot_points+2);
+    var mud = main_unkept_dice.join(" ").replace(/,/g,": ");
+    
+    var resource_sort_roll= [];
+    for (var key of Object.keys(resource_dice_pool)) {
+        //resource_sort_roll.push([key,randomInteger(resource_dice_pool[key].substr(1))])
+	resource_sort_roll.push([key,resource_dice_pool[key].substr(1)]);
+    }   
+
+    resource_sort_roll.sort(function(a, b) { return b[1] - a[1];});
+    
+    resource_kept_dice = resource_sort_roll.slice(0,1);
+    var rkd = resource_kept_dice.join(" ").replace(/,/g,": ");
+    resource_unkept_dice = resource_sort_roll.slice(1);
+	  var rud = resource_unkept_dice.join(" ").replace(/,/g,": ");
+    
+    var main_result = main_kept_dice.reduce((a,b) => a + parseInt(b[1],0), 0);
+    var resource_result = resource_kept_dice.reduce((a,b) => a + parseInt(b[1],0), 0);
+   
+    //var mmd = main_kept_dice.join(" ").replace(/,/g," = ");
+    //console.log(mmd);
+    //console.log(main_kept_dice);	
+    console.log(mkd);
+    //console.log(main_unkept_dice);
+    console.log(mud);
+    //console.log(resource_kept_dice);
+    console.log(rud);
+    //console.log(resource_unkept_dice);
+    console.log(rkd);
+    //console.log(main_result);
+    //console.log(resource_result);
+    console.log(main_result+resource_result);
+    
+</script>

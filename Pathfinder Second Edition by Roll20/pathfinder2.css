@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**********************************************************************************************************/
 /***************************              GLOBAL SETTINGS                      ***************************/
 /********************************************************************************************************/
@@ -288,7 +289,7 @@ input[name="attr_toggles"][value*=normalspells] ~ div.sheet-spells div.sheet-col
 input[name="attr_toggles"][value*=innate] ~ div.sheet-spells div.sheet-column div.sheet-innate {
   display: inline-block; }
 
-/* HIDE PC SECTIONS NOT NEEDED ON NPC PAGE
+     /* HIDE PC SECTIONS NOT NEEDED ON NPC PAGE
 	----------------------------- */
 div.sheet-background-color {
   background-color: #98503e;
@@ -298,7 +299,6 @@ div.sheet-ability-select label {
   margin-bottom: 0em; }
   div.sheet-ability-select label:last-child {
     margin-top: -1px; }
-
 div.sheet-ability-select select {
   background-color: #5b1110;
   border: 0.2em solid #5b1110;
@@ -312,7 +312,6 @@ div.sheet-ability-select select {
   padding: 0;
   text-transform: uppercase;
   vertical-align: top; }
-
 div.sheet-ability-select span {
   background-color: white;
   border: 1px solid #5b1110;
@@ -442,17 +441,14 @@ div.sheet-dcbase {
 div.sheet-dcbase:nth-of-type(2) div {
   display: inline-block;
   width: 40%; }
-
 div.sheet-dcbase:nth-of-type(2) span[name="attr_ac_ability_display"] {
   display: inline-block;
   height: 2em;
   width: 2em; }
-
 div.sheet-dcbase:nth-of-type(2) span[name="attr_ac_ability_display"],
 div.sheet-dcbase:nth-of-type(2) span[data-i18n="or"] {
   background-color: white;
   border: 1px solid #5b1110; }
-
 div.sheet-dcbase:nth-of-type(2) span[data-i18n="or"] {
   text-transform: uppercase;
   color: #5b1110; }
@@ -481,18 +477,14 @@ div.sheet-character-row div.sheet-column {
 div.sheet-pc-info div.sheet-column:nth-of-type(1) {
   grid-row-start: 1;
   grid-column-start: 1; }
-
 div.sheet-pc-info div.sheet-column:nth-of-type(2) {
   grid-row-start: 1;
   grid-column-start: 2; }
-
 div.sheet-pc-info div.sheet-column:nth-of-type(3) {
   grid-row-start: 1;
   grid-column-start: 3; }
-
 div.sheet-pc-info div.sheet-column:nth-of-type(1) {
   padding: 0.25em 0.5em; }
-
 div.sheet-pc-info div.sheet-column:nth-of-type(3) {
   padding: 0.25em; }
 
@@ -562,22 +554,18 @@ div.sheet-column h1[data-i18n="character_sheet"] {
   -webkit-text-stroke-width: 1px;
   font-size: 2em;
   width: 100%; }
-
 div.sheet-column h2[data-i18n="proficiency"] {
   color: #002766;
   line-height: inherit;
   text-decoration: underline; }
-
 div.sheet-column div.sheet-character-prof,
 div.sheet-column div.sheet-character-action {
   color: #002766;
   font-size: 0.9em;
   font-family: "Arial Narrow", sans-serif !important;
   text-transform: capitalize; }
-
 div.sheet-column div.sheet-character-prof {
   width: 41%; }
-
 div.sheet-column div.sheet-character-action {
   padding-left: 5%;
   width: 57%; }
@@ -658,11 +646,9 @@ div.sheet-column label[data-i18n-title="level"] > span {
   padding: 0.5em;
   text-align: center;
   width: 100%; }
-
 div.sheet-column label[data-i18n-title="hero_points"] > span {
   color: #002766;
   font-size: 0.8em; }
-
 div.sheet-column input[name="attr_level"],
 div.sheet-column input[name="attr_hero_points"] {
   font-size: 1em;
@@ -782,7 +768,6 @@ div.sheet-classdc div.sheet-circle {
   height: 3em;
   padding: 15% 0px;
   width: 3em; }
-
 div.sheet-classdc div.sheet-display {
   grid-template-columns: 2fr 3fr 2fr 2fr 2fr 2fr;
   padding: 1%; }
@@ -795,7 +780,6 @@ div.sheet-classdc div.sheet-display {
       font-size: 0.8em;
       font-size: 1em;
       grid-column: 2 / 3; }
-
 div.sheet-classdc div.sheet-settings {
   grid-template-columns: 1.5fr 1.5fr 1fr 1fr; }
 
@@ -941,16 +925,13 @@ div.sheet-savingthrows {
 /* Hit Points */
 div.sheet-hitpoints hr {
   margin: 3% 0%; }
-
 div.sheet-hitpoints div.sheet-circle {
   grid-row: 1 / 3;
   height: 5em;
   width: 5em; }
-
 div.sheet-hitpoints div.sheet-display {
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 1%; }
-
 div.sheet-hitpoints div.sheet-settings {
   grid-template-columns: 2fr 1fr 1fr 1fr;
   padding-bottom: 0em; }
@@ -962,7 +943,10 @@ div.sheet-hitpoints div.sheet-settings {
     width: 100%; }
 
 /* Resistance, Conditions, Senses, Languages repeating sections */
-div.sheet-languages button[type="roll"], div.sheet-senses button[type="roll"], div.sheet-resistance button[type="roll"], div.sheet-conditions button[type="roll"] {
+div.sheet-languages button[type="roll"]
+, div.sheet-senses button[type="roll"]
+, div.sheet-resistance button[type="roll"]
+, div.sheet-conditions button[type="roll"] {
   z-index: 5; }
 
 div.sheet-repeating {
@@ -1072,43 +1056,32 @@ div.sheet-strikes h2 {
   line-height: 2em; }
   div.sheet-strikes h2[data-i18n="notes"] {
     margin-top: 5%; }
-
 h1 + div.sheet-strikes {
   margin-bottom: 2px;
   padding-top: 1%; }
-
 div.sheet-strikes span.sheet-collapse {
   color: white;
   padding-left: 5px;
   grid-column: 1 / -1;
   margin: 5px; }
-
 div.sheet-strikes span.sheet-sublabel {
   font-size: 0.8em;
   line-height: 1em;
   padding: 3px; }
-
 div.sheet-strikes span[data-i18n="weapon"] {
   grid-area: 1 / 1 / 1 / 4; }
-
 div.sheet-strikes span[data-i18n="atk"] {
   grid-area: 3 / 1 / 3 / 1; }
-
 div.sheet-strikes span[data-i18n="damage"] {
   grid-area: 3 / 2 / 3 / 4; }
-
 div.sheet-strikes button.sheet-display-weapon {
   grid-area: 2 / 1 / 2 / 4; }
-
 div.sheet-strikes button.sheet-display-attack {
   grid-row: 4; }
-
 div.sheet-strikes button.sheet-display-damage {
   grid-column: 2 / 4; }
-
 div.sheet-strikes button.sheet-settings-button {
   grid-area: 1 / 1 / 1 / 1; }
-
 div.sheet-strikes button[type="roll"] {
   min-height: 2em;
   font-size: 0.8em;
@@ -1123,25 +1096,20 @@ div.sheet-strikes button[type="roll"] {
     font-weight: normal; }
     div.sheet-strikes button[type="roll"]:not(:first-of-type):hover {
       background: #0044b3; }
-
 div.sheet-strikes button[name="act_collapse"] {
   color: white;
   grid-area: 1 / 3 / 1 / 3; }
-
 div.sheet-strikes div.sheet-display {
   grid-row-gap: 3%;
   margin-top: 1%;
   grid-template-columns: 1fr 1fr 1.5em; }
-
 div.sheet-strikes div.sheet-settings label.sheet-sublabel input,
 div.sheet-strikes div.sheet-settings div.sheet-ability-select input,
 div.sheet-strikes div.sheet-settings input[name="attr_damage_weapon_specialization"],
 div.sheet-strikes div.sheet-settings input[name="attr_damage_other"] {
   text-align: center; }
-
 div.sheet-strikes div.sheet-settings span.sheet-sublabel {
   font-size: 0.6em; }
-
 div.sheet-strikes div.sheet-settings div.sheet-strikes-grid {
   grid-template-columns: 1fr 0.5fr 1fr 1fr 1fr 1fr; }
   div.sheet-strikes div.sheet-settings div.sheet-strikes-grid h2,
@@ -1149,7 +1117,6 @@ div.sheet-strikes div.sheet-settings div.sheet-strikes-grid {
   div.sheet-strikes div.sheet-settings div.sheet-strikes-grid label[data-i18n-title*="weapon_traits"] {
     grid-column: 1 / -1;
     margin-bottom: 5px; }
-
 div.sheet-strikes div.sheet-settings div.sheet-damage-grid {
   grid-template-columns: 1fr 1fr 0.25fr 1.5fr 0.25fr 0.25fr 0.25fr;
   grid-row-gap: 2%; }
@@ -1167,10 +1134,8 @@ div.sheet-strikes div.sheet-settings div.sheet-damage-grid {
     font-size: 8pt;
     text-align: center;
     height: 1em; }
-
 div.sheet-strikes .repcontainer .repitem:nth-child(even) {
   background: rgba(255, 255, 255, 0.1); }
-
 div.sheet-strikes div.sheet-circle {
   color: white;
   font-size: 1.4em;
@@ -1196,7 +1161,6 @@ div.sheet-weapon-proficiences-grid h2,
 div.sheet-repeating-weapon-proficiences-grid h2 {
   grid-row: 1;
   padding-left: 3%; }
-
 div.sheet-weapon-proficiences-grid label,
 div.sheet-repeating-weapon-proficiences-grid label {
   grid-row: 2; }
@@ -1223,7 +1187,6 @@ div.sheet-skills h2 {
   font-size: 1.5em;
   text-align: center;
   font-family: serif; }
-
 div.sheet-skills div.sheet-display {
   align-items: center;
   grid-template-columns: 7.5em 2fr 0.5fr 2fr 2fr 2fr 2fr 2fr;
@@ -1252,11 +1215,9 @@ div.sheet-skills div.sheet-display {
     padding: 0; }
   div.sheet-skills div.sheet-display span.sheet-symbol {
     top: unset; }
-
 div.sheet-skills div.sheet-settings {
   grid-row-gap: 5px;
   grid-template-columns: repeat(5, 1fr); }
-
 div.sheet-skills div.sheet-ability-select select {
   font-size: 0.7em; }
 
@@ -1503,7 +1464,7 @@ div.sheet-coins {
     margin: auto;
     text-align: center;
     text-transform: uppercase; }
-  div.sheet-coins input[type="text"].sheet-circle, div.sheet-coins div.sheet-circle[type="text"] {
+  div.sheet-coins input[type="text"].sheet-circle, div.sheet-coins div[type="text"].sheet-circle {
     position: absolute;
     left: calc(50% - 1.5em);
     background-color: white;
@@ -1571,7 +1532,6 @@ div.sheet-item-repeating-grid {
 
 div.sheet-inv-half-col div.sheet-settings label.sheet-inv-name {
   grid-column: 1 / 3; }
-
 div.sheet-inv-half-col div.sheet-settings label.sheet-inv-bulk {
   grid-column: 3; }
 
@@ -1613,17 +1573,14 @@ div.sheet-spelldc-grid span.sheet-display {
   height: 2.5em;
   line-height: 2.25em;
   width: 2.5em; }
-
 div.sheet-spellattack-grid button[name="act_toggle_spell_attack"],
 div.sheet-spellattack-grid span.sheet-display,
 div.sheet-spelldc-grid button[name="act_toggle_spell_attack"],
 div.sheet-spelldc-grid span.sheet-display {
   grid-column: 1; }
-
 div.sheet-spellattack-grid.sheet-settings,
 div.sheet-spelldc-grid.sheet-settings {
   grid-template-columns: 1fr 1fr 1fr; }
-
 div.sheet-spellattack-grid .sheet-darkred,
 div.sheet-spelldc-grid .sheet-darkred {
   font-size: 0.8em; }
@@ -1676,11 +1633,11 @@ div.sheet-spellslots label.sheet-spellslots-row {
   font-size: 10pt;
   padding: 0.1em 0.4em; }
   div.sheet-spellslots label.sheet-spellslots-row > span.sheet-cantrip-level {
-    grid-column: 2 / -1; }
+    grid-column: 2/-1; }
   div.sheet-spellslots label.sheet-spellslots-row > span.sheet-level {
-    grid-column: 1 / 1; }
+    grid-column: 1/1; }
   div.sheet-spellslots label.sheet-spellslots-row > span.sheet-slots-per-day {
-    grid-column: 2 / -1; }
+    grid-column: 2/-1; }
 
 div.sheet-spellsectiontoggles label.sheet-spellsectiontoggles-row {
   display: grid;
@@ -1720,7 +1677,6 @@ div.sheet-spells h1.sheet-label + span.sheet-sort {
     border: solid 1px white;
     color: white;
     text-transform: capitalize; }
-
 div.sheet-spells div.sheet-spell-panel-header,
 div.sheet-spells div.sheet-spell-panel-row {
   align-items: center;
@@ -1731,26 +1687,21 @@ div.sheet-spells div.sheet-spell-panel-row {
   padding: 0.5em 0.5em 0 0.5em; }
   div.sheet-spells div.sheet-spell-panel-header > span.sheet-spellfocus-actions,
   div.sheet-spells div.sheet-spell-panel-row > span.sheet-spellfocus-actions {
-    grid-column: 2 / 4; }
+    grid-column: 2/4; }
   div.sheet-spells div.sheet-spell-panel-header > span.sheet-spellfocus-level,
   div.sheet-spells div.sheet-spell-panel-row > span.sheet-spellfocus-level {
     grid-column: 4; }
-
 div.sheet-spells div.sheet-spell-panel-row button[name*="collapse"] {
   font-family: 'Pictos';
   transform: rotate(90deg);
   margin-top: 3px; }
-
 div.sheet-spells div.sheet-spell-panel-row input.sheet-toggles[value*="collapse"] ~ button[name*="collapse"] {
   transform: rotate(-90deg); }
-
 div.sheet-spells div.sheet-spell-panel-row div.sheet-collapse {
   grid-column: 1 / -1; }
-
 div.sheet-spells div.sheet-spell-panel-row input.sheet-toggles[value*="collapse"] ~ div.sheet-collapse {
   display: inline-block;
   height: auto; }
-
 div.sheet-spells div.sheet-spell-panel-row > button {
   overflow: hidden;
   text-overflow: ellipsis; }
@@ -1758,12 +1709,10 @@ div.sheet-spells div.sheet-spell-panel-row > button {
     position: absolute;
     top: 0;
     left: 0; }
-
 div.sheet-spells div.sheet-spell-panel-row > span {
   text-transform: uppercase;
   text-align: center;
   font-size: 0.8em; }
-
 div.sheet-spells div.sheet-spell-panel-row > div.sheet-collapse {
   height: 0;
   display: none;
@@ -1794,7 +1743,6 @@ div.sheet-spells div.sheet-spell-panel-row > div.sheet-collapse {
     div.sheet-spells div.sheet-spell-panel-row > div.sheet-collapse > div.sheet-spell-details-section input.sheet-spell-detail-toggle-control[value=""] + .sheet-spell-detail-toggling-item,
     div.sheet-spells div.sheet-spell-panel-row > div.sheet-collapse > div.sheet-spell-details-section input.sheet-spell-detail-toggle-control[value="0"] + .sheet-spell-detail-toggling-item {
       display: none; }
-
 div.sheet-spells div.sheet-spell-panel-row > div.sheet-settings {
   display: grid;
   grid-column: 1 / -1;
@@ -1857,14 +1805,11 @@ div.sheet-spells div.sheet-spell-panel-row > div.sheet-settings {
       width: 18%; }
       div.sheet-spells div.sheet-spell-panel-row > div.sheet-settings div.sheet-spells-savingthrow-dc select:first-of-type {
         width: 27%; }
-
 div.sheet-spells div.sheet-background-color {
   margin-bottom: 0.25em; }
-
 div.sheet-spells span.sheet-sublabel {
   font-size: 0.8em;
   font-weight: normal; }
-
 div.sheet-spells div.sheet-display button[type="roll"] {
   display: inline-grid;
   font-size: 1em;
@@ -2077,10 +2022,8 @@ input:checked + .sheet-slider:before {
 div.sheet-options h3 {
   font-size: 0.8em;
   text-transform: uppercase; }
-
 div.sheet-options label {
   font-size: 0.8em; }
-
 div.sheet-options div.sheet-options-wrapper {
   display: inline;
   flex-direction: column;
@@ -2269,7 +2212,7 @@ input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; }
 
-input[type="number"] {
+input[type=number] {
   -moz-appearance: textfield; }
 
 /***************************   NPC    ***************************/
@@ -2574,20 +2517,14 @@ div.sheet-npc input {
     width: 10%; }
   div.sheet-npc input[name="attr_lore"] {
     text-align: center; }
-  div.sheet-npc input[name="attr_languages"][value=""] + div.sheet-npc-row,
-  div.sheet-npc input[name="attr_immunities"][value=""] + div.sheet-npc-row,
-  div.sheet-npc input[name="attr_weaknesses"][value=""] + div.sheet-npc-row,
-  div.sheet-npc input[name="attr_resistances"][value=""] + div.sheet-npc-row {
+  div.sheet-npc input[name="attr_languages"][value=""] + div.sheet-npc-row, div.sheet-npc input[name="attr_immunities"][value=""] + div.sheet-npc-row, div.sheet-npc input[name="attr_weaknesses"][value=""] + div.sheet-npc-row, div.sheet-npc input[name="attr_resistances"][value=""] + div.sheet-npc-row {
     display: none; }
-
 div.sheet-npc label {
   color: #002766;
   width: initial;
   text-transform: capitalize; }
-
 div.sheet-npc select.sheet-simple {
   width: auto; }
-
 div.sheet-npc div.sheet-actiontype label {
   width: 49%; }
 
@@ -2595,7 +2532,6 @@ div.sheet-npc div.sheet-actiontype label {
 span.sheet-actiontype input[value=""] + span,
 span.sheet-actiontype input[value="0"] + span {
   display: none; }
-
 span.sheet-actiontype span {
   text-transform: capitalize;
   font-weight: bold; }
@@ -2613,18 +2549,15 @@ span.sheet-actiontype span {
   margin: 0.1em auto;
   text-align: center;
   width: 2.5em; }
-
 .sheet-spells .sheet-npc-spellcaster-field,
 .sheet-spells input[name="attr_toggles"][value*="npcspellcaster"] ~ div.sheet-spellattack-grid,
 .sheet-spells input[name="attr_toggles"][value*="npcspellcaster"] ~ div.sheet-spelldc-grid,
 .sheet-spells input[name="attr_toggles"][value*="npcspellcaster"] ~ .sheet-pc-spellcaster-field,
 .sheet-spells input[name="attr_toggles"][value*="npcspellcaster"] ~ .repcontainer .sheet-pc-spellcaster-field {
   display: none; }
-
 .sheet-spells input[name="attr_toggles"][value*="npcspellcaster"] ~ span.sheet-npc-spellcaster-field,
 .sheet-spells input[name="attr_toggles"][value*="npcspellcaster"] ~ .repcontainer .sheet-npc-spellcaster-field {
   display: inline-block; }
-
 .sheet-spells input[name="attr_toggles"][value*="npcspellcaster"] ~ .sheet-npc-spellcaster-field {
   display: block; }
 
@@ -2776,37 +2709,28 @@ input.sheet-toggles[value*="color:neutral"] ~ div.sheet-pc-info div.sheet-column
     color: #757575;
     -webkit-text-fill-color: black;
     background: transparent; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-character div.sheet-ability-scores-grid span.sheet-display {
   background-color: #D1D1D1; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-character div.sheet-speed {
   background-color: #D1D1D1; }
   input.sheet-toggles[value*="color:neutral"] ~ div.sheet-character div.sheet-speed div {
     border-color: #757575; }
   input.sheet-toggles[value*="color:neutral"] ~ div.sheet-character div.sheet-speed span[data-i18n="feet"] {
     color: black; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-character div.sheet-armorclass div.sheet-grid div.sheet-circle label span:first-child {
   background-color: black; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-character div.sheet-armorclass div.sheet-shield-hp label + span {
   color: #757575; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-character div.sheet-armorclass span.sheet-symbol,
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-character div.sheet-armorclass div.sheet-dcbase,
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-character div.sheet-armorclass div.sheet-armor-cap span[data-i18n="or"] {
   color: black; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-character div.sheet-hitpoints div.sheet-grid div.sheet-circle label span:first-child {
   background-color: black; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-details div.sheet-reaction-activity-grid div.sheet-actiontype.sheet-darkred {
   background-color: black; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-inventory h2 {
   color: white; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-inventory div.sheet-background-color {
   background-color: gray; }
   input.sheet-toggles[value*="color:neutral"] ~ div.sheet-inventory div.sheet-background-color div.sheet-inv-top-row span.sheet-center,
@@ -2835,37 +2759,28 @@ input.sheet-toggles[value*="color:neutral"] ~ div.sheet-inventory div.sheet-back
     background-color: black; }
   input.sheet-toggles[value*="color:neutral"] ~ div.sheet-inventory div.sheet-background-color div.sheet-dcbase {
     color: black; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-spells div.sheet-settings label.sheet-bordertop {
   border-top-color: black; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-spells div.sheet-spell-panel-row > div.sheet-settings span.sheet-bordertop {
   border-top: 3px solid black; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-spells div.sheet-spelldc-grid span.sheet-spelldc-base {
   color: black;
   font-size: 0.6em; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-spells h1.sheet-label + span.sheet-sort select {
   background-color: black; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-spells div.sheet-spell-panel-row > div.sheet-settings span.sheet-bordertop {
   color: black; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-tabs label.sheet-whisper-toggle span {
   background-color: transparent;
   color: black; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-tabs span {
   background-color: black;
   color: white; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-tabs input[type="checkbox"]:checked + span,
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-tabs input[type="radio"]:checked + span {
   background-color: white;
   color: black;
   box-shadow: inset 0px 0px 3px 1px black; }
-
 input.sheet-toggles[value*="color:neutral"] ~ div.sheet-options div.sheet-options-wrapper div.sheet-options-panel {
   border-color: #757575; }
   input.sheet-toggles[value*="color:neutral"] ~ div.sheet-options div.sheet-options-wrapper div.sheet-options-panel button {

@@ -67,11 +67,9 @@ input[type="text"], input[type="number"] {
   input[type="text"]::placeholder, input[type="number"]::placeholder {
     background-color: #fefcea;
     border: 0.1em dotted #226aae; }
-
 input[type='number'] {
   text-align: center;
   width: 100% !important; }
-
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   margin: 0; }
 
@@ -127,7 +125,7 @@ div.sheet-tabs div.sheet-col, div.sheet-character div.sheet-row, div.sheet-chara
 /* GENERIC CLASSES
     ============================= */
 div.sheet-background {
-  background-color: rgba(77, 77, 77, 0.0784314); }
+  background-color: rgba(77, 77, 77, 0.0784313725); }
 
 .sheet-border {
   border: 0.15em solid #4c4c4c; }
@@ -211,7 +209,6 @@ label.sheet-styled-checkbox input, label.sheet-styled-checkbox span {
   width: 15px;
   position: relative;
   left: 20%; }
-
 label.sheet-styled-checkbox span {
   border: 2px solid #226aae;
   display: inline-block;
@@ -220,7 +217,6 @@ label.sheet-styled-checkbox span {
   text-align: center;
   font-size: 1em;
   line-height: 90%; }
-
 label.sheet-styled-checkbox input {
   opacity: 0;
   top: 20%;
@@ -325,16 +321,12 @@ div.sheet-character {
     ============================= */
 div.sheet-entourage div.sheet-col-2 {
   grid-template-columns: 2fr 1fr; }
-
 div.sheet-entourage div.sheet-knight div.sheet-2column {
   grid-template-columns: 1.5fr 1fr; }
-
 div.sheet-entourage div.sheet-damage {
   grid-template-columns: auto 1fr 1.2em; }
-
 div.sheet-entourage .repitem {
   padding: 2% 1%; }
-
 div.sheet-entourage div.sheet-wife div.sheet-2column {
   grid-template-columns: 2fr 1fr; }
 
@@ -403,18 +395,7 @@ div.sheet-footer {
 /*  SHOW & HIDE SHEETS
     ============================= */
 input[name='attr_sheet_type']:not([value='character']) ~ div.sheet-character, input[name='attr_sheet_type']:not([value='holdings']) ~ div.sheet-holdings, input[name='attr_sheet_type']:not([value='feast']) ~ div.sheet-feast, input[name='attr_sheet_type']:not([value='npc']) ~ div.sheet-npc, input[name='attr_sheet_type']:not([value='entourage']) ~ div.sheet-entourage, input[name='attr_sheet_type']:not([value='feast']) ~ div.sheet-tabs select[name='attr_feast_type'],
-input[name='attr_sheet_type'][value='feast'] ~ div.sheet-tabs select[name='attr_character_type'], input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-row .sheet-knight,
-input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-personal-data div.sheet-row .sheet-knight,
-input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-personality-traits .sheet-knight,
-input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-personality-traits div.sheet-row .sheet-knight,
-input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-equipment-carried .sheet-knight,
-input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-skills .sheet-knight,
-input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-squire .sheet-knight,
-input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col .sheet-knight,
-input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-combat-skills .sheet-knight,
-input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-horse div.sheet-row .sheet-knight,
-input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheeet-family-history div.sheet-row,
-input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-col .sheet-knight,
+input[name='attr_sheet_type'][value='feast'] ~ div.sheet-tabs select[name='attr_character_type'], input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-row .sheet-knight, input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-personal-data div.sheet-row .sheet-knight, input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-personality-traits .sheet-knight, input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-personality-traits div.sheet-row .sheet-knight, input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-equipment-carried .sheet-knight, input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-skills .sheet-knight, input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-squire .sheet-knight, input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col .sheet-knight, input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-combat-skills .sheet-knight, input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-horse div.sheet-row .sheet-knight, input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheeet-family-history div.sheet-row, input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-character div.sheet-col div.sheet-col .sheet-knight,
 input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-holdings div.sheet-col div.sheet-row .sheet-knight,
 input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-holdings div.sheet-col div.sheet-personal-data div.sheet-row .sheet-knight,
 input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-holdings div.sheet-col div.sheet-personality-traits .sheet-knight,
@@ -438,18 +419,7 @@ input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-entourage di
 input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-entourage div.sheet-row div.sheet-combat-skills .sheet-knight,
 input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-entourage div.sheet-row div.sheet-horse div.sheet-row .sheet-knight,
 input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-entourage div.sheet-row div.sheeet-family-history div.sheet-row,
-input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-entourage div.sheet-row div.sheet-col .sheet-knight, input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-row .sheet-woman,
-input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-personal-data div.sheet-row .sheet-woman,
-input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-personality-traits .sheet-woman,
-input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-personality-traits div.sheet-row .sheet-woman,
-input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-equipment-carried .sheet-woman,
-input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-skills .sheet-woman,
-input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-squire .sheet-woman,
-input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col .sheet-woman,
-input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-combat-skills .sheet-woman,
-input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-horse div.sheet-row .sheet-woman,
-input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheeet-family-history div.sheet-row,
-input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-col .sheet-woman,
+input[name='attr_character_type']:not([value="knight"]) ~ div.sheet-entourage div.sheet-row div.sheet-col .sheet-knight, input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-row .sheet-woman, input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-personal-data div.sheet-row .sheet-woman, input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-personality-traits .sheet-woman, input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-personality-traits div.sheet-row .sheet-woman, input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-equipment-carried .sheet-woman, input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-skills .sheet-woman, input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-squire .sheet-woman, input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col .sheet-woman, input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-combat-skills .sheet-woman, input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-horse div.sheet-row .sheet-woman, input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheeet-family-history div.sheet-row, input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-character div.sheet-col div.sheet-col .sheet-woman,
 input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-holdings div.sheet-col div.sheet-row .sheet-woman,
 input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-holdings div.sheet-col div.sheet-personal-data div.sheet-row .sheet-woman,
 input[name='attr_character_type']:not([value="woman"]) ~ div.sheet-holdings div.sheet-col div.sheet-personality-traits .sheet-woman,
@@ -538,7 +508,7 @@ input:checked + .sheet-slider:before {
   text-align: center;
   font-family: 'fantasy';
   /* DICE ROLL STYLES
-        ----------------------------- */ }
+  ----------------------------- */ }
   .sheet-rolltemplate-rolls div.sheet-template-container .inlinerollresult.fullfail,
   .sheet-rolltemplate-rolls div.sheet-template-container .inlinerollresult.fullcrit,
   .sheet-rolltemplate-rolls div.sheet-template-container .inlinerollresult.importantroll {
@@ -587,7 +557,6 @@ input:checked + .sheet-slider:before {
           display: block; }
           .sheet-rolltemplate-rolls div.sheet-template-container div.sheet-template-body div.sheet-template-roll div.sheet-template-col span:last-child {
             margin-top: 5%; }
-
 .sheet-rolltemplate-rolls div.sheet-template-rollResult {
   padding: 5px;
   background-color: white;
@@ -603,4 +572,4 @@ input:checked + .sheet-slider:before {
   font-family: "pictos"; }
 
 .repitem:nth-of-type(even) {
-  background-color: rgba(77, 77, 77, 0.0784314); }
+  background-color: rgba(77, 77, 77, 0.0784313725); }

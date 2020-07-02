@@ -1,4 +1,4 @@
-<script>
+// JavaScript Document
 on('chat:message', function (msg_orig) {
 	var msg = _.clone(msg_orig);
 	
@@ -80,4 +80,3 @@ function sorted_rolls(params){
 
 	return params;
 }
-</script>

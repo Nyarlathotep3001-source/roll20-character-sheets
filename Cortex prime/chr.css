@@ -645,3 +645,75 @@ ul {
 .sheet-header2{
     font-size: 25px;
 }
+
+.sheet-rolltemplate-container {
+    background-color: rgb(126, 45, 64);
+    border: 4px solid rgb(126, 45, 64);
+    padding: 2px;
+    margin 10px
+    width: 220px;
+}
+
+.sheet-rolltemplate-header {
+    background-color: rgb(126, 45, 64);
+    color: #fff;
+    font-size: 1.8em;
+    font-variant: small-caps;
+    line-height: 20px;
+    margin:10px;
+}
+
+.sheet-rolltemplate-subheader {
+    background-color: #fff;
+    padding-top:10px;
+    color: #000;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5em;
+    font-style: italic;
+    font-variant: small-caps;
+}
+
+.sheet-arrow-right {
+    background-color: #fff;
+    border-bottom: 2px solid transparent;
+    border-left: 180px solid #fff;
+    border-top: 2px solid transparent;
+}
+
+.sheet-rolltemplate-keptdice {
+    background-color: #fff;
+    color: #3FB315;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    line-height: 1.6em;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.sheet-rolltemplate-unkeptdice {
+    background-color: #fff;
+    color: #B31515;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    line-height: 1.6em;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.sheet-rolltemplate-footer {
+    background-color: rgb(126, 45, 64);
+    margin:10px;
+	color: #fff;
+	font-variant: small-caps;
+    font-size: 1.8em;
+}
+
+.sheet-rolltemplate-footer2 {
+    background-color: rgb(235, 199, 223);
+    padding:10px;
+	color: #fff;
+	font-variant: small-caps;
+    font-size: 1.6em;
+}

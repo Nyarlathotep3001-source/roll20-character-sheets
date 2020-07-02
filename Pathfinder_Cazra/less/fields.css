@@ -1,0 +1,162 @@
+input {
+  border: none;
+  box-shadow: none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+select {
+  box-shadow: none;
+  height: auto;
+  line-height: 18px;
+  margin-bottom: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+textarea {
+  background: linear-gradient(to bottom, transparent, transparent 17px, #000);
+  background-attachment: local;
+  background-size: 1px 18px;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  resize: none;
+}
+.fieldBox {
+  background: #000;
+  border: solid 1px #000;
+  display: inline-block;
+  position: relative;
+}
+.fieldBox label {
+  position: absolute;
+  font-size: 0.75em;
+  line-height: 0.75em;
+  top: 110%;
+}
+.fieldBox .inner input {
+  border: none;
+  border-radius: 0
+    display: inline;
+  text-align: center;
+}
+.labelledAbove {
+  display: inline-block;
+}
+.labelledAbove label {
+  font-size: 0.8em;
+  margin-bottom: 0;
+  padding-top: 0.5em;
+}
+.labelledBoxH {
+  background: #000;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  display: inline-block;
+  overflow: hidden;
+}
+.labelledBoxH > label {
+  background: #000;
+  color: #fff;
+  display: inline;
+  font-weight: bold;
+  padding: 0 0.25em;
+  vertical-align: middle;
+}
+.labelledBoxH > .inner {
+  background: #fff;
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+}
+.labelledBoxH > .inner > * {
+  vertical-align: middle;
+}
+.labelledBoxH > .inner .fraction {
+  background: #fff;
+  display: inline-block;
+}
+.labelledBoxH > .inner .fraction input {
+  border: none;
+  display: inline;
+}
+.labelledBoxV {
+  background: #000;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  display: inline-block;
+  overflow: hidden;
+}
+.labelledBoxV > label {
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.labelledBoxV > .inner {
+  background: #fff;
+  text-align: center;
+  width: 100%;
+}
+.labelledBoxV > .inner input {
+  text-align: center;
+  width: 100%;
+}
+.labelledBoxV > .inner .fraction {
+  background: #fff;
+  display: inline-block;
+}
+.labelledBoxV > .inner .fraction input {
+  border: none;
+  display: inline;
+}
+.labelledUnderlined {
+  display: inline-block;
+  margin-bottom: 1em;
+  min-width: 0.45in;
+  position: relative;
+}
+.labelledUnderlined label {
+  position: absolute;
+  font-size: 0.75em;
+  line-height: 0.75em;
+  top: 110%;
+}
+.labelledUnderlined .inner {
+  border-bottom: solid 1px #000;
+  width: 100%;
+}
+.labelledUnderlined .inner input {
+  border: none;
+  border-radius: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+.labelledUnderlined .inner select {
+  border: none;
+  border-radius: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+.labelledUnderlined .inner .readOnlyBox {
+  padding: 0;
+  padding-top: initial;
+  width: 100%;
+}
+.mathOperator {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.readOnlyBox {
+  background: #ddd;
+  display: inline-block;
+  padding: 4px;
+  width: 3.5em;
+}
