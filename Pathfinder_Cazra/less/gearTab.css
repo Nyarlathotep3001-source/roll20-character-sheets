@@ -1,0 +1,15 @@
+.gearTab .mundaneGear {
+  float: right;
+  width: 35%;
+}
+.gearTab .mundaneGear .money {
+  text-align: center
+      width: 100%;
+}
+.gearTab .mundaneGear .money .labelledBoxV input {
+  width: 0.6in;
+}
+.gearTab .specialGear {
+  float: left;
+  width: 60%;
+}

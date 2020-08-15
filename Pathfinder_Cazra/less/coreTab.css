@@ -1,0 +1,93 @@
+.coreTab table.abilityScores {
+  border-collapse: separate;
+  border-spacing: 0.5em;
+}
+.coreTab table.abilityScores th {
+  font-size: 0.75em;
+  padding: 0 1em;
+}
+.coreTab table.abilityScores td {
+  text-align: center;
+}
+.coreTab table.abilityScores td.blackBox {
+  border-radius: 0.5em;
+}
+.coreTab table.abilityScores td.blackBox .longname {
+  font-size: 0.7em;
+  line-height: 0.7em;
+}
+.coreTab table.abilityScores td.blackBox .shortname {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+.coreTab .attacks {
+  border-collapse: separate;
+  border-spacing: 0 0.5em;
+}
+.coreTab .attacks .atkAbility {
+  display: inline-block;
+  position: relative;
+}
+.coreTab .attacks .atkAbility select {
+  font-size: 0.6em;
+  height: 2.5em;
+  line-height: 1em;
+  padding: 1px;
+  position: absolute;
+  width: 4em;
+}
+.coreTab .attacks .head label {
+  font-size: 0.75em;
+  line-height: 1em;
+  margin-bottom: 0;
+  width: 1in;
+}
+.coreTab .attacks .body .blackBox {
+  border-radius: 0.5em;
+  width: 2in;
+}
+.coreTab .attacks .body .blackBox input {
+  background: #000;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  width: 1.8in;
+}
+.coreTab .attacks .body .labelledBoxH {
+  vertical-align: middle;
+}
+.coreTab .attacks .body .rollButton {
+  color: #fff;
+  font-family: dicefontd20;
+  font-size: 0.5in;
+  font-weight: normal;
+  line-height: 0.5in;
+}
+.coreTab .attacks .mathOperator {
+  margin-bottom: 0;
+}
+.coreTab table.savingThrows {
+  border-collapse: separate;
+  border-spacing: 0 0.5em;
+}
+.coreTab table.savingThrows th {
+  font-size: 0.75em;
+}
+.coreTab table.savingThrows td {
+  text-align: center;
+}
+.coreTab table.savingThrows td.blackBox {
+  border-radius: 0.5em;
+}
+.coreTab table.savingThrows td.blackBox .abilityName {
+  font-size: 0.7em;
+  line-height: 0.7em;
+}
+.coreTab table.savingThrows td.blackBox .saveName {
+  font-size: 1.5em;
+}
+.coreTab table.savingThrows .mathOperator {
+  margin-bottom: 0;
+}

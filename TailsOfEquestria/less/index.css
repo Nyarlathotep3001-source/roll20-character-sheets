@@ -1,0 +1,1197 @@
+.rolltemplate-toe table {
+  background: #fff;
+  border: solid 2px #7e3fc1;
+  border-collapse: separate;
+  border-radius: 1em;
+  overflow: hidden;
+  width: 100%;
+}
+.rolltemplate-toe table thead th {
+  background: #7e3fc1;
+  color: #fff;
+  padding: 0.5em 1em;
+}
+.rolltemplate-toe table tbody {
+  text-align: center;
+}
+.rolltemplate-toe table tbody tr:nth-child(2n+0) {
+  background: rgba(0, 0, 0, 0.1);
+}
+.rolltemplate-toe table tbody td {
+  padding: 0.5em 0;
+}
+.rolltemplate-toe table tbody .upgrade span:nth-child(1),
+.rolltemplate-toe table tbody .downgrade span:nth-child(1) {
+  font-weight: bold;
+  padding-right: 1em;
+}
+.rolltemplate-toe table tbody .notes {
+  font-size: 0.8em;
+  font-style: italic;
+  word-break: break-word;
+}
+.charsheet {
+  background: #fff;
+  color: #5e3dba;
+  width: 8in;
+}
+.charsheet input {
+  border: none;
+  box-shadow: none;
+}
+.charsheet input[type=color] {
+  height: 20px;
+  padding: 0;
+  width: 20px;
+}
+.charsheet input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+.charsheet input[type=color]::-webkit-color-swatch {
+  border: none;
+}
+.charsheet input[type=number]::-webkit-inner-spin-button,
+.charsheet input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.charsheet label {
+  color: #5e3dba;
+}
+.charsheet select {
+  box-shadow: none;
+  height: auto;
+  line-height: 18px;
+  margin-bottom: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.charsheet textarea {
+  background: linear-gradient(to bottom, transparent, transparent 17px, #5e3dba);
+  background-attachment: local;
+  background-size: 1px 18px;
+  border: none;
+  box-shadow: none;
+  color: #5e3dba;
+  padding: 0;
+  resize: none;
+}
+.charsheet .checkbox label {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  width: auto;
+}
+.charsheet .checkbox .checkboxInner {
+  border: solid 2px #5e3dba;
+  border-radius: 5px;
+  display: inline-block;
+  height: 16px;
+  position: relative;
+  vertical-align: middle;
+  width: 16px;
+}
+.charsheet .checkbox .checkboxInner input {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.charsheet .checkbox .checkboxInner input:checked + div {
+  background: #5e3dba;
+  height: 100%;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.charsheet .checkbox .checkboxInner input:checked + div::after {
+  content: "✓";
+  color: #fff;
+}
+.charsheet .labelledAbove {
+  display: inline-block;
+}
+.charsheet .labelledAbove label {
+  font-size: 0.8em;
+  margin-bottom: 0;
+  padding-top: 0.5em;
+}
+.charsheet .labelledBoxH {
+  background: #aaa;
+  display: inline-block;
+  overflow: hidden;
+}
+.charsheet .labelledBoxH > label {
+  display: inline;
+  font-weight: bold;
+  padding: 0 0.25em;
+  vertical-align: middle;
+}
+.charsheet .labelledBoxH > .inner {
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+}
+.charsheet .labelledBoxH > .inner > * {
+  vertical-align: middle;
+}
+.charsheet .labelledBoxH > .inner .fraction {
+  display: inline-block;
+}
+.charsheet .labelledBoxH > .inner .fraction input {
+  border: none;
+  display: inline;
+}
+.charsheet .labelledBoxV {
+  background: #aaa;
+  display: inline-block;
+  overflow: hidden;
+}
+.charsheet .labelledBoxV > label {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.charsheet .labelledBoxV > .inner {
+  text-align: center;
+  width: 100%;
+}
+.charsheet .labelledBoxV > .inner input {
+  text-align: center;
+  width: 100%;
+}
+.charsheet .labelledBoxV > .inner .fraction {
+  display: inline-block;
+}
+.charsheet .labelledBoxV > .inner .fraction input {
+  border: none;
+  display: inline;
+}
+.charsheet .labelledUnderlined {
+  display: inline-block;
+  margin-bottom: 1em;
+  min-width: 0.45in;
+  position: relative;
+}
+.charsheet .labelledUnderlined label {
+  position: absolute;
+  font-size: 0.75em;
+  line-height: 1em;
+  top: 110%;
+}
+.charsheet .labelledUnderlined .inner {
+  border-bottom: dotted 1px #5e3dba;
+  width: 100%;
+}
+.charsheet .labelledUnderlined .inner input {
+  border: none;
+  border-radius: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+.charsheet .labelledUnderlined .inner select {
+  border: none;
+  border-radius: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+.charsheet .labelledUnderlined .inner .readOnlyBox {
+  padding: 0;
+  padding-top: initial;
+  width: 100%;
+}
+.charsheet .mathOperator {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.charsheet .readOnlyBox {
+  background: #ddd;
+  display: inline-block;
+  padding: 4px;
+  width: 3.5em;
+}
+.charsheet .updowngrade {
+  display: inline-block;
+  pointer-events: none;
+}
+.charsheet .updowngrade .arrows {
+  display: inline-block;
+  vertical-align: middle;
+}
+.charsheet .updowngrade .arrows .up,
+.charsheet .updowngrade .arrows .down {
+  height: 14px;
+  position: relative;
+  width: 12px;
+}
+.charsheet .updowngrade .arrows .up span,
+.charsheet .updowngrade .arrows .down span {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.charsheet .updowngrade .arrows .up input[type=checkbox],
+.charsheet .updowngrade .arrows .down input[type=checkbox] {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.charsheet .updowngrade .arrows .up input[type=checkbox]:checked + span,
+.charsheet .updowngrade .arrows .down input[type=checkbox]:checked + span {
+  color: #bbace4;
+}
+.charsheet .updowngrade > label {
+  display: inline-block;
+  font-size: 0.7em;
+  line-height: 1em;
+  margin: 0;
+  text-align: right;
+  vertical-align: middle;
+  width: 0.5in;
+}
+.charsheet .updowngrade > span {
+  pointer-events: all;
+}
+.charsheet .updowngrade .labelledUnderlined {
+  min-width: auto;
+}
+.charsheet .d20 {
+  display: inline-block;
+  font-family: dicefontd20;
+  vertical-align: middle;
+}
+.charsheet .d20::before {
+  content: "t";
+}
+.charsheet .itemIcon {
+  display: inline-block;
+  font-family: pictos;
+  vertical-align: middle;
+}
+.charsheet .itemIcon::before {
+  content: ":";
+}
+.charsheet .quirkIcon {
+  display: inline-block;
+  font-family: pictos;
+  vertical-align: middle;
+}
+.charsheet .quirkIcon::before {
+  content: "k";
+}
+.charsheet .reputationIcon {
+  display: inline-block;
+  font-family: pictos;
+  vertical-align: middle;
+}
+.charsheet .reputationIcon::before {
+  content: "^";
+}
+.charsheet .talentIcon {
+  display: inline-block;
+  font-family: pictos;
+  vertical-align: middle;
+}
+.charsheet .talentIcon::before {
+  content: "e";
+}
+.charsheet .main-container {
+  position: relative;
+}
+.charsheet .main-container .pcSheet .bio {
+  background: #DECFE1;
+  border-radius: 0.1in;
+  display: inline-block;
+  padding: 1em;
+  width: 5in;
+}
+.charsheet .main-container .pcSheet .bio .colors {
+  text-align: center;
+}
+.charsheet .main-container .pcSheet .bio .colors span label {
+  display: inline-block;
+  width: auto;
+}
+.charsheet .main-container .pcSheet .bio .labelledUnderlined {
+  display: block;
+  font-size: 2em;
+  margin-bottom: 0.1in;
+  width: 100%;
+}
+.charsheet .main-container .pcSheet .bio .labelledUnderlined label {
+  display: inline-block;
+  font-size: 0.7em;
+  line-height: 1em;
+  margin: 0;
+  position: relative;
+  text-align: right;
+  width: 2in;
+}
+.charsheet .main-container .pcSheet .bio .labelledUnderlined .inner {
+  display: inline-block;
+  width: auto;
+}
+.charsheet .main-container .pcSheet .bio .labelledUnderlined .inner input,
+.charsheet .main-container .pcSheet .bio .labelledUnderlined .inner select {
+  background: transparent;
+  color: #5e3dba;
+  font-size: 0.7em;
+  padding: 0;
+  width: 2.5in;
+}
+.charsheet .main-container .pcSheet .explodingHooves {
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 1.5in;
+  width: 2.2in;
+}
+.charsheet .main-container .pcSheet .friendshipTokens {
+  background: #f226e4;
+  border-radius: 0.75in;
+  display: inline-block;
+  height: 1.5in;
+  position: absolute;
+  right: 0.5in;
+  top: 0;
+  width: 1.5in;
+}
+.charsheet .main-container .pcSheet .friendshipTokens h1 {
+  color: #fff;
+  font-size: 1.75em;
+}
+.charsheet .main-container .pcSheet .friendshipTokens h1 span {
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  transform-origin: center;
+  width: 100%;
+}
+.charsheet .main-container .pcSheet .friendshipTokens h1 span:nth-of-type(1) {
+  transform: rotate(-63deg);
+}
+.charsheet .main-container .pcSheet .friendshipTokens h1 span:nth-of-type(2) {
+  transform: rotate(-49deg);
+}
+.charsheet .main-container .pcSheet .friendshipTokens h1 span:nth-of-type(3) {
+  transform: rotate(-35deg);
+}
+.charsheet .main-container .pcSheet .friendshipTokens h1 span:nth-of-type(4) {
+  transform: rotate(-21deg);
+}
+.charsheet .main-container .pcSheet .friendshipTokens h1 span:nth-of-type(5) {
+  transform: rotate(-7deg);
+}
+.charsheet .main-container .pcSheet .friendshipTokens h1 span:nth-of-type(6) {
+  transform: rotate(7deg);
+}
+.charsheet .main-container .pcSheet .friendshipTokens h1 span:nth-of-type(7) {
+  transform: rotate(21deg);
+}
+.charsheet .main-container .pcSheet .friendshipTokens h1 span:nth-of-type(8) {
+  transform: rotate(35deg);
+}
+.charsheet .main-container .pcSheet .friendshipTokens h1 span:nth-of-type(9) {
+  transform: rotate(49deg);
+}
+.charsheet .main-container .pcSheet .friendshipTokens h1 span:nth-of-type(10) {
+  transform: rotate(63deg);
+}
+.charsheet .main-container .pcSheet .friendshipTokens input {
+  background: transparent;
+  color: #fff;
+  font-size: 5em;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.charsheet .main-container .pcSheet .reputations {
+  background: #EDBBF3;
+  border-radius: 0.1in;
+  padding: 1em;
+}
+.charsheet .main-container .pcSheet .reputations h1 {
+  color: #5e3dba;
+  font-size: 2em;
+}
+.charsheet .main-container .pcSheet .reputations .reputation {
+  background: #EDBBF3;
+  border-radius: 0.1in;
+  padding: 0.25em;
+  padding-bottom: 1em;
+  position: relative;
+  transition: background 0.5s;
+  width: 7in;
+}
+.charsheet .main-container .pcSheet .reputations .reputation:hover {
+  background: #d664e4;
+}
+.charsheet .main-container .pcSheet .reputations .reputation > label {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: 0.5em;
+  vertical-align: middle;
+  width: 0.5in;
+}
+.charsheet .main-container .pcSheet .reputations .reputation input,
+.charsheet .main-container .pcSheet .reputations .reputation select {
+  background: transparent;
+  color: #5e3dba;
+}
+.charsheet .main-container .pcSheet .reputations .reputation .labelledUnderlined {
+  vertical-align: middle;
+}
+.charsheet .main-container .pcSheet .stamina {
+  background: #F9B6DD;
+  border-radius: 0.1in;
+  display: inline-block;
+  height: 1in;
+  padding: 1em;
+  vertical-align: middle;
+}
+.charsheet .main-container .pcSheet .stamina h1 {
+  color: #5e3dba;
+  display: inline-block;
+  font-size: 2em;
+  vertical-align: middle;
+}
+.charsheet .main-container .pcSheet .stamina .fraction {
+  display: inline-block;
+}
+.charsheet .main-container .pcSheet .stamina .fraction input {
+  background: transparent;
+  border-bottom: dotted 1px #5e3dba;
+  color: #5e3dba;
+  font-size: 2em;
+  padding: 0;
+  text-align: center;
+  width: 2em;
+}
+.charsheet .main-container .pcSheet .stamina .fraction span {
+  font-size: 2em;
+  vertical-align: middle;
+}
+.charsheet .main-container .pcSheet .stamina .labelledUnderlined {
+  display: block;
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+.charsheet .main-container .pcSheet .stamina .labelledUnderlined label {
+  display: inline-block;
+  line-height: 1em;
+  margin: 0;
+  position: relative;
+  text-align: right;
+  width: auto;
+}
+.charsheet .main-container .pcSheet .stamina .labelledUnderlined .inner {
+  display: inline-block;
+  width: auto;
+}
+.charsheet .main-container .pcSheet .stamina .labelledUnderlined .inner input,
+.charsheet .main-container .pcSheet .stamina .labelledUnderlined .inner select {
+  background: transparent;
+  color: #5e3dba;
+  font-size: 0.7em;
+  padding: 0;
+  width: 1.5in;
+}
+.charsheet .main-container .pcSheet .traits {
+  display: inline-block;
+  vertical-align: middle;
+}
+.charsheet .main-container .pcSheet .traits .trait {
+  background: #aaa;
+  border-radius: 0.1in;
+  display: inline-block;
+  height: 1in;
+  padding: 1em;
+  position: relative;
+  transition: background 0.5s;
+  width: 1.2in;
+}
+.charsheet .main-container .pcSheet .traits .trait button {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.charsheet .main-container .pcSheet .traits .trait select {
+  background: transparent;
+  border: none;
+  color: #5e3dba;
+  font-size: 1.5em;
+  left: 0.2in;
+  position: absolute;
+  text-align: center;
+  text-align-last: center;
+  top: 0.4in;
+  width: 1.1in;
+}
+.charsheet .main-container .pcSheet .traits .trait label.traitName {
+  font-size: 2em;
+  text-align: center;
+}
+.charsheet .main-container .pcSheet .traits .trait .updowngrade {
+  position: absolute;
+  top: 0.8in;
+}
+.charsheet .main-container .pcSheet .traits .trait .updowngrade input {
+  background: transparent;
+  color: #5e3dba;
+  text-align: center;
+}
+.charsheet .main-container .pcSheet .traits .trait.body {
+  background: #B3E7EF;
+}
+.charsheet .main-container .pcSheet .traits .trait.body:hover {
+  background: #89dae6;
+}
+.charsheet .main-container .pcSheet .traits .trait.mind {
+  background: #DECFE1;
+}
+.charsheet .main-container .pcSheet .traits .trait.mind:hover {
+  background: #c8b0cd;
+}
+.charsheet .main-container .pcSheet .traits .trait.charm {
+  background: #EDBBF3;
+}
+.charsheet .main-container .pcSheet .traits .trait.charm:hover {
+  background: #e290eb;
+}
+.charsheet .main-container .pcSheet .traits .trait .d20 {
+  font-size: 2.5em;
+  left: 0.06in;
+  position: absolute;
+  top: 0;
+}
+.charsheet .main-container .tabSheet.npcSheet .bio input[type='text'] {
+  color: #5e3dba;
+  font-size: x-large;
+  width: 6in;
+}
+.charsheet .main-container .tabSheet.npcSheet .bio .checkbox {
+  display: inline-block;
+}
+.charsheet .main-container .tabSheet.npcSheet .explodingHooves h1 {
+  font-size: 1em;
+  line-height: 1em;
+  width: 0.7in;
+}
+.charsheet .main-container .tabSheet.npcSheet .explodingHooves button {
+  font-size: 2.5em;
+  height: 0.3in;
+  width: 0.4in;
+}
+.charsheet .main-container .tabSheet.npcSheet .quirks > label {
+  display: inline-block;
+  margin: 0;
+  width: auto;
+}
+.charsheet .main-container .tabSheet.npcSheet .quirks .repcontainer {
+  display: inline-block;
+}
+.charsheet .main-container .tabSheet.npcSheet .quirks .repitem {
+  display: inline-block;
+}
+.charsheet .main-container .tabSheet.npcSheet .quirks .quirk {
+  height: auto;
+  padding: 0;
+  position: relative;
+  width: auto;
+}
+.charsheet .main-container .tabSheet.npcSheet .quirks .quirk .editCheckbox {
+  height: 16px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 16px;
+  z-index: 1;
+}
+.charsheet .main-container .tabSheet.npcSheet .quirks .quirk .editCheckbox:hover + .editIcon {
+  color: #5e3dba;
+}
+.charsheet .main-container .tabSheet.npcSheet .quirks .quirk .editCheckbox:checked + .editIcon::after {
+  content: "_";
+}
+.charsheet .main-container .tabSheet.npcSheet .quirks .quirk .editCheckbox:checked ~ .editMode {
+  display: block;
+}
+.charsheet .main-container .tabSheet.npcSheet .quirks .quirk .editCheckbox:checked ~ .viewMode {
+  display: none;
+}
+.charsheet .main-container .tabSheet.npcSheet .quirks .quirk .editIcon {
+  color: #ab99de;
+  display: inline-block;
+  font-family: Pictos;
+  height: 16px;
+  position: absolute;
+  transition: color 0.5s;
+  width: 16px;
+}
+.charsheet .main-container .tabSheet.npcSheet .quirks .quirk .editIcon::after {
+  content: "y";
+}
+.charsheet .main-container .tabSheet.npcSheet .quirks .quirk .editMode {
+  display: none;
+  margin-left: 16px;
+}
+.charsheet .main-container .tabSheet.npcSheet .quirks .quirk .editMode .labelledUnderlined:nth-of-type(2) {
+  width: 5in;
+}
+.charsheet .main-container .tabSheet.npcSheet .quirks .quirk .viewMode {
+  margin-left: 16px;
+  margin-right: 1em;
+  display: inline-block;
+}
+.charsheet .main-container .tabSheet.npcSheet .stamina {
+  display: inline-block;
+  margin-top: 3px;
+  width: 2.8in;
+}
+.charsheet .main-container .tabSheet.npcSheet .stamina .staminaInner label {
+  display: inline-block;
+  margin: 0;
+  width: auto;
+}
+.charsheet .main-container .tabSheet.npcSheet .stamina .staminaInner .fraction {
+  display: inline-block;
+}
+.charsheet .main-container .tabSheet.npcSheet .stamina .staminaInner .fraction input {
+  background: transparent;
+  border-bottom: dotted 1px #5e3dba;
+  color: #5e3dba;
+  padding: 0;
+  text-align: center;
+  width: 3em;
+}
+.charsheet .main-container .tabSheet.npcSheet .stamina .staminaInner .fraction span {
+  padding-left: 5px;
+  vertical-align: middle;
+}
+.charsheet .main-container .tabSheet.npcSheet .stamina .damageModifiers label {
+  top: 0;
+  width: 0.5in;
+}
+.charsheet .main-container .tabSheet.npcSheet .stamina .damageModifiers .inner {
+  left: 0.6in;
+  position: absolute;
+  width: 2in;
+}
+.charsheet .main-container .tabSheet.npcSheet .stamina .damageModifiers .inner input {
+  color: #5e3dba;
+  padding: 0;
+}
+.charsheet .main-container .tabSheet.npcSheet .talents > label {
+  display: inline-block;
+  margin: 0;
+  width: auto;
+}
+.charsheet .main-container .tabSheet.npcSheet .talents .repcontainer {
+  display: inline-block;
+}
+.charsheet .main-container .tabSheet.npcSheet .talents .repitem {
+  display: inline-block;
+}
+.charsheet .main-container .tabSheet.npcSheet .talents .talent {
+  height: auto;
+  padding: 0;
+  position: relative;
+  width: auto;
+}
+.charsheet .main-container .tabSheet.npcSheet .talents .talent .editCheckbox {
+  height: 16px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 16px;
+  z-index: 1;
+}
+.charsheet .main-container .tabSheet.npcSheet .talents .talent .editCheckbox:hover + .editIcon {
+  color: #5e3dba;
+}
+.charsheet .main-container .tabSheet.npcSheet .talents .talent .editCheckbox:checked + .editIcon::after {
+  content: "_";
+}
+.charsheet .main-container .tabSheet.npcSheet .talents .talent .editCheckbox:checked ~ .editMode {
+  display: block;
+}
+.charsheet .main-container .tabSheet.npcSheet .talents .talent .editCheckbox:checked ~ .viewMode {
+  display: none;
+}
+.charsheet .main-container .tabSheet.npcSheet .talents .talent .editIcon {
+  color: #ab99de;
+  display: inline-block;
+  font-family: Pictos;
+  height: 16px;
+  position: absolute;
+  transition: color 0.5s;
+  width: 16px;
+}
+.charsheet .main-container .tabSheet.npcSheet .talents .talent .editIcon::after {
+  content: "y";
+}
+.charsheet .main-container .tabSheet.npcSheet .talents .talent .editMode {
+  display: none;
+  margin-left: 16px;
+}
+.charsheet .main-container .tabSheet.npcSheet .talents .talent .viewMode {
+  margin-left: 16px;
+  margin-right: 1em;
+  display: inline-block;
+}
+.charsheet .main-container .tabSheet.npcSheet .traits {
+  display: inline-block;
+  vertical-align: top;
+}
+.charsheet .main-container .tabSheet.npcSheet .traits .trait {
+  border-radius: 10px;
+  display: inline-block;
+  height: 0.5in;
+  padding: 3px;
+  position: relative;
+  transition: background 0.5s;
+  width: 1.5in;
+}
+.charsheet .main-container .tabSheet.npcSheet .traits .trait:hover {
+  background: #ccf;
+}
+.charsheet .main-container .tabSheet.npcSheet .traits .trait button {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.charsheet .main-container .tabSheet.npcSheet .traits .trait select {
+  background: transparent;
+  border: none;
+  color: #5e3dba;
+  line-height: 1em;
+  position: absolute;
+  width: 1in;
+}
+.charsheet .main-container .tabSheet.npcSheet .traits .trait label.traitName {
+  display: inline-block;
+  margin: 0;
+  width: auto;
+}
+.charsheet .main-container .tabSheet.npcSheet .traits .trait .updowngrade {
+  position: absolute;
+  left: 0;
+  top: 0.2in;
+}
+.charsheet .main-container .tabSheet.npcSheet .traits .trait .updowngrade input {
+  background: transparent;
+  color: #5e3dba;
+  text-align: center;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .bio input[type='text'] {
+  color: #5e3dba;
+  font-size: x-large;
+  width: 6in;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .bio .checkbox {
+  display: inline-block;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems {
+  background: #DECFE1;
+  border-radius: 0.1in;
+  padding: 1em;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems > label {
+  display: inline-block;
+  margin: 0;
+  width: auto;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems .repcontainer {
+  display: inline-block;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems .repitem {
+  display: inline-block;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems .system {
+  height: auto;
+  padding: 0;
+  position: relative;
+  width: auto;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems .system input {
+  background: transparent;
+  color: #5e3dba;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems .system .editCheckbox {
+  height: 16px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 16px;
+  z-index: 1;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems .system .editCheckbox:hover + .editIcon {
+  color: #5e3dba;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems .system .editCheckbox:checked + .editIcon::after {
+  content: "_";
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems .system .editCheckbox:checked ~ .editMode {
+  display: block;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems .system .editCheckbox:checked ~ .viewMode {
+  display: none;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems .system .editIcon {
+  color: #ab99de;
+  display: inline-block;
+  font-family: Pictos;
+  height: 16px;
+  position: absolute;
+  transition: color 0.5s;
+  width: 16px;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems .system .editIcon::after {
+  content: "y";
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems .system .editMode {
+  display: none;
+  margin-left: 16px;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems .system .editMode .labelledUnderlined:nth-of-type(2) {
+  width: 5in;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .systems .system .viewMode {
+  margin-left: 16px;
+  margin-right: 1em;
+  display: inline-block;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .vehicleStats {
+  border: solid 3px #79AB29;
+  border-collapse: separate;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .vehicleStats input {
+  color: #5e3dba;
+  text-align: center;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .vehicleStats select {
+  border: none;
+  color: #5e3dba;
+  text-align: center;
+  text-align-last: center;
+  width: 100%;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .vehicleStats td {
+  border-right: solid 1px #79AB29;
+  text-align: center;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .vehicleStats td:last-of-type {
+  border-right: none;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .vehicleStats th {
+  background: #79AB29;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .vehicleStats .fraction {
+  display: inline-block;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .vehicleStats .fraction input {
+  background: transparent;
+  color: #5e3dba;
+  padding: 0;
+  text-align: center;
+  width: 3em;
+}
+.charsheet .main-container .tabSheet.vehicleSheet .vehicleStats .fraction span {
+  vertical-align: middle;
+}
+.charsheet .main-container .tabSheet.equipmentSheet .equipmentHeader {
+  margin-bottom: 0;
+}
+.charsheet .main-container .tabSheet.equipmentSheet .equipmentHeader span {
+  display: inline-block;
+  font-style: italic;
+  font-weight: bold;
+  padding-right: 1em;
+}
+.charsheet .main-container .tabSheet.equipmentSheet .equipmentBody .labelledUnderlined {
+  padding-right: 1em;
+}
+.charsheet .main-container .tabSheet.notesSheet textarea {
+  height: 6in;
+}
+.charsheet .main-container .tabSheet > div {
+  margin-bottom: 0.2in;
+}
+.charsheet .main-container .explodingHooves {
+  text-align: center;
+}
+.charsheet .main-container .explodingHooves h1 {
+  display: inline-block;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+.charsheet .main-container .explodingHooves .explodingHoof {
+  background: #B3E7EF;
+  border-radius: 0.1in;
+  display: inline-block;
+  transition: background 0.5s;
+}
+.charsheet .main-container .explodingHooves .explodingHoof button {
+  background: transparent;
+  border: none;
+  font-size: 3em;
+  font-weight: bold;
+  height: 0.4in;
+  width: 0.5in;
+}
+.charsheet .main-container .explodingHooves .explodingHoof:hover {
+  background: #5fccdd;
+}
+.charsheet .main-container .explodingHooves .explodingHoof:nth-of-type(1) button::before {
+  font-family: dicefontd4;
+  content: "l";
+}
+.charsheet .main-container .explodingHooves .explodingHoof:nth-of-type(2) button::before {
+  font-family: dicefontd6;
+  content: "l";
+}
+.charsheet .main-container .explodingHooves .explodingHoof:nth-of-type(3) button::before {
+  font-family: dicefontd8;
+  content: "h";
+}
+.charsheet .main-container .explodingHooves .explodingHoof:nth-of-type(4) button::before {
+  font-family: dicefontd10;
+  content: "j";
+}
+.charsheet .main-container .explodingHooves .explodingHoof:nth-of-type(5) button::before {
+  font-family: dicefontd12;
+  content: "l";
+}
+.charsheet .main-container .explodingHooves .explodingHoof:nth-of-type(6) button::before {
+  font-family: dicefontd20;
+  content: "t";
+}
+.charsheet .main-container .quirks {
+  background: #DECFE1;
+  border-radius: 0.1in;
+  padding: 1em;
+}
+.charsheet .main-container .quirks h1 {
+  color: #5e3dba;
+  font-size: 2em;
+}
+.charsheet .main-container .quirks .quirk > label {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: 0.25em;
+  vertical-align: middle;
+  width: 0.3in;
+}
+.charsheet .main-container .quirks .quirk input,
+.charsheet .main-container .quirks .quirk select {
+  background: transparent;
+  color: #5e3dba;
+}
+.charsheet .main-container .quirks .quirk .labelledUnderlined {
+  vertical-align: middle;
+}
+.charsheet .main-container .quirks .quirk .labelledUnderlined:nth-of-type(3) {
+  width: 4in;
+}
+.charsheet .main-container .talents {
+  background: #B3E7EF;
+  border-radius: 0.1in;
+  padding: 1em;
+}
+.charsheet .main-container .talents h1 {
+  color: #5e3dba;
+  font-size: 2em;
+}
+.charsheet .main-container .talents .talent {
+  background: #B3E7EF;
+  border-radius: 0.1in;
+  height: 0.6in;
+  padding: 0.25em;
+  padding-bottom: 1em;
+  position: relative;
+  transition: background 0.5s;
+  width: 7in;
+}
+.charsheet .main-container .talents .talent:hover {
+  background: #5fccdd;
+}
+.charsheet .main-container .talents .talent > label {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: 0.5em;
+  vertical-align: middle;
+  width: 0.5in;
+}
+.charsheet .main-container .talents .talent button {
+  background: #5fccdd;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.charsheet .main-container .talents .talent input,
+.charsheet .main-container .talents .talent select {
+  background: transparent;
+  color: #5e3dba;
+}
+.charsheet .main-container .talents .talent .labelledUnderlined {
+  vertical-align: middle;
+}
+.charsheet .main-container .talents .talent .notes .labelledUnderlined {
+  display: block;
+  width: 7in;
+}
+.charsheet .main-container .talents .talent .notes .labelledUnderlined label {
+  display: inline-block;
+  font-size: 0.75em;
+  margin-bottom: 0;
+  padding-right: 0;
+  padding-top: 4px;
+  position: relative;
+  top: 0;
+  vertical-align: middle;
+  width: auto;
+}
+.charsheet .main-container .talents .talent .notes .labelledUnderlined .inner {
+  display: inline-block;
+  width: 6in;
+}
+.charsheet input[name="attr_useApiExplodingHoof"]:checked ~ .tabs .main-container .explodingHooves.noApi {
+  display: none;
+}
+.charsheet input[name="attr_useApiExplodingHoof"]:not(:checked) ~ .tabs .main-container .explodingHooves.api {
+  display: none;
+}
+.charsheet .itemcontrol {
+  z-index: 99;
+}
+.charsheet .repcontrol button {
+  background: #ddaaff;
+  border: none;
+  color: #5e3dba;
+  margin-top: 0.1in;
+  text-shadow: none;
+  transition: background 0.5s;
+  z-index: 99;
+}
+.charsheet .repcontrol button:hover {
+  background: #aa88ff;
+}
+.charsheet h1 {
+  color: #5e3dba;
+}
+.charsheet .centeredH {
+  text-align: center;
+}
+.charsheet .centeredV > * {
+  vertical-align: middle;
+}
+.charsheet .floatLeft {
+  float: left;
+}
+.charsheet .floatRight {
+  float: right;
+}
+.charsheet .inlineBlock {
+  display: inline-block;
+}
+.charsheet .tabs {
+  /* Display the tabs if their radio is checked. */
+}
+.charsheet .tabs > input[type="radio"] {
+  display: none;
+}
+.charsheet .tabs > input[type="radio"]:checked + label {
+  background: #ea60e1;
+  color: #fff;
+}
+.charsheet .tabs > label {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0;
+  min-width: 0.5in;
+  padding: 5px;
+  text-align: center;
+  width: auto;
+}
+.charsheet .tabs > label:nth-of-type(1) {
+  margin-left: 0.5in;
+}
+.charsheet .tabs > .tabContents {
+  border: solid 5px #ea60e1;
+  border-radius: 0.25in;
+  padding: 1em;
+}
+.charsheet .tabs > .tabContents > .tab {
+  display: none;
+}
+.charsheet .tabs input#sheetTabPC:checked ~ .tabContents .tab#sheetTabPCContainer {
+  display: block;
+}
+.charsheet .tabs input#sheetTabNPC:checked ~ .tabContents .tab#sheetTabNPCContainer {
+  display: block;
+}
+.charsheet .tabs input#sheetTabEquipment:checked ~ .tabContents .tab#sheetTabEquipmentContainer {
+  display: block;
+}
+.charsheet .tabs input#sheetTabVehicle:checked ~ .tabContents .tab#sheetTabVehicleContainer {
+  display: block;
+}
+.charsheet .tabs input#sheetTabNotes:checked ~ .tabContents .tab#sheetTabNotesContainer {
+  display: block;
+}
+.charsheet .top {
+  height: 2.6in;
+  overflow: hidden;
+  position: relative;
+  width: 8in;
+}
+.charsheet .top .mask {
+  height: 1in;
+  left: 0;
+  position: absolute;
+  top: 1.65in;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0), #fff);
+}
+.charsheet .top .version {
+  bottom: 0;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+}

@@ -1,0 +1,40 @@
+.d20 {
+  display: inline-block;
+  font-family: dicefontd20;
+  vertical-align: middle;
+}
+.d20::before {
+  content: "t";
+}
+.itemIcon {
+  display: inline-block;
+  font-family: pictos;
+  vertical-align: middle;
+}
+.itemIcon::before {
+  content: ":";
+}
+.quirkIcon {
+  display: inline-block;
+  font-family: pictos;
+  vertical-align: middle;
+}
+.quirkIcon::before {
+  content: "k";
+}
+.reputationIcon {
+  display: inline-block;
+  font-family: pictos;
+  vertical-align: middle;
+}
+.reputationIcon::before {
+  content: "^";
+}
+.talentIcon {
+  display: inline-block;
+  font-family: pictos;
+  vertical-align: middle;
+}
+.talentIcon::before {
+  content: "e";
+}

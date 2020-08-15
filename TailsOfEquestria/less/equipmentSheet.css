@@ -1,0 +1,12 @@
+.tabSheet.equipmentSheet .equipmentHeader {
+  margin-bottom: 0;
+}
+.tabSheet.equipmentSheet .equipmentHeader span {
+  display: inline-block;
+  font-style: italic;
+  font-weight: bold;
+  padding-right: 1em;
+}
+.tabSheet.equipmentSheet .equipmentBody .labelledUnderlined {
+  padding-right: 1em;
+}

@@ -1,0 +1,234 @@
+input {
+  border: none;
+  box-shadow: none;
+}
+input[type=color] {
+  height: 20px;
+  padding: 0;
+  width: 20px;
+}
+input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type=color]::-webkit-color-swatch {
+  border: none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+label {
+  color: #5e3dba;
+}
+select {
+  box-shadow: none;
+  height: auto;
+  line-height: 18px;
+  margin-bottom: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+textarea {
+  background: linear-gradient(to bottom, transparent, transparent 17px, #5e3dba);
+  background-attachment: local;
+  background-size: 1px 18px;
+  border: none;
+  box-shadow: none;
+  color: #5e3dba;
+  padding: 0;
+  resize: none;
+}
+.checkbox label {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+  width: auto;
+}
+.checkbox .checkboxInner {
+  border: solid 2px #5e3dba;
+  border-radius: 5px;
+  display: inline-block;
+  height: 16px;
+  position: relative;
+  vertical-align: middle;
+  width: 16px;
+}
+.checkbox .checkboxInner input {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.checkbox .checkboxInner input:checked + div {
+  background: #5e3dba;
+  height: 100%;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.checkbox .checkboxInner input:checked + div::after {
+  content: "✓";
+  color: #fff;
+}
+.labelledAbove {
+  display: inline-block;
+}
+.labelledAbove label {
+  font-size: 0.8em;
+  margin-bottom: 0;
+  padding-top: 0.5em;
+}
+.labelledBoxH {
+  background: #aaa;
+  display: inline-block;
+  overflow: hidden;
+}
+.labelledBoxH > label {
+  display: inline;
+  font-weight: bold;
+  padding: 0 0.25em;
+  vertical-align: middle;
+}
+.labelledBoxH > .inner {
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+}
+.labelledBoxH > .inner > * {
+  vertical-align: middle;
+}
+.labelledBoxH > .inner .fraction {
+  display: inline-block;
+}
+.labelledBoxH > .inner .fraction input {
+  border: none;
+  display: inline;
+}
+.labelledBoxV {
+  background: #aaa;
+  display: inline-block;
+  overflow: hidden;
+}
+.labelledBoxV > label {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.labelledBoxV > .inner {
+  text-align: center;
+  width: 100%;
+}
+.labelledBoxV > .inner input {
+  text-align: center;
+  width: 100%;
+}
+.labelledBoxV > .inner .fraction {
+  display: inline-block;
+}
+.labelledBoxV > .inner .fraction input {
+  border: none;
+  display: inline;
+}
+.labelledUnderlined {
+  display: inline-block;
+  margin-bottom: 1em;
+  min-width: 0.45in;
+  position: relative;
+}
+.labelledUnderlined label {
+  position: absolute;
+  font-size: 0.75em;
+  line-height: 1em;
+  top: 110%;
+}
+.labelledUnderlined .inner {
+  border-bottom: dotted 1px #5e3dba;
+  width: 100%;
+}
+.labelledUnderlined .inner input {
+  border: none;
+  border-radius: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+.labelledUnderlined .inner select {
+  border: none;
+  border-radius: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+.labelledUnderlined .inner .readOnlyBox {
+  padding: 0;
+  padding-top: initial;
+  width: 100%;
+}
+.mathOperator {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.readOnlyBox {
+  background: #ddd;
+  display: inline-block;
+  padding: 4px;
+  width: 3.5em;
+}
+.updowngrade {
+  display: inline-block;
+  pointer-events: none;
+}
+.updowngrade .arrows {
+  display: inline-block;
+  vertical-align: middle;
+}
+.updowngrade .arrows .up,
+.updowngrade .arrows .down {
+  height: 14px;
+  position: relative;
+  width: 12px;
+}
+.updowngrade .arrows .up span,
+.updowngrade .arrows .down span {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.updowngrade .arrows .up input[type=checkbox],
+.updowngrade .arrows .down input[type=checkbox] {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.updowngrade .arrows .up input[type=checkbox]:checked + span,
+.updowngrade .arrows .down input[type=checkbox]:checked + span {
+  color: #bbace4;
+}
+.updowngrade > label {
+  display: inline-block;
+  font-size: 0.7em;
+  line-height: 1em;
+  margin: 0;
+  text-align: right;
+  vertical-align: middle;
+  width: 0.5in;
+}
+.updowngrade > span {
+  pointer-events: all;
+}
+.updowngrade .labelledUnderlined {
+  min-width: auto;
+}
