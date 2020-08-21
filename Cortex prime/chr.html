@@ -71,17 +71,20 @@
         </div>
     </div>
     <div class ="sheet-item-plot">
-        
+        <input name='attr_main_dice' type='hidden' value='{}'>
+        <input name='attr_main_diceroll' type='hidden' value='{"d4":0,"d6":0,"d8":0,"d10":0,"d12":0}'>
+        <input name='attr_resource_dice' type='hidden' value='{}'>
+        <input name='attr_resource_diceroll' type='hidden' value='{"d4":0,"d6":0,"d8":0,"d10":0,"d12":0}'>
+        <input name='attr_stress_dice' type='hidden' value='{}'> 
+        <div class="sheet-header2">Plot points available
+            <span class = "sheet-plot_point_container" name="attr_plot_points"></span><input name='attr_plot_points' type='hidden' value=0>
+        </div>
     </div>
     <div class ="sheet-item-roll">
-            <input name='attr_main_dice' type='text' value='{}'>
-            <input name='attr_main_diceroll' type='text' value='{"d4":0,"d6":0,"d8":0,"d10":0,"d12":0}'>
-            <input name='attr_resource_dice' type='text' value='{}'>
-            <input name='attr_resource_diceroll' type='text' value='{"d4":0,"d6":0,"d8":0,"d10":0,"d12":0}'>
-            <input name='attr_stress_dice' type='text' value='{}'> 
-            <input name='attr_plot_points' type='text' value=0>
-            <input name='attr_plot_points_spent' type='text' value=0>
-            <button type="roll" value="!cortex_custom_roll" name="call_cortex_roll">Cortex roll</button>
+            <div class="sheet-header2">Plot points to spend on roll
+                <input name='attr_plot_points_spent' type='text' value=0>
+                <button class="sheet-cortex_roll" type="roll" value="!cortex_custom_roll" name="call_cortex_roll">Cortex roll</button>
+            </div>
     </div>
     <div class ="sheet-item-affiliations_title sheet-rotated">Affiliations</div>
     <div class ="sheet-griditem sheet-item-affiliations_body">
@@ -316,7 +319,9 @@
     					<li><label class="sheet-result_r1b"><input type="checkbox" name="attr_resource1b" value="d10"><img src="http://www.thefirstcity.co.uk/rpg/dice/d10.jpg" alt="d10" width="32" height="32" border="0" align="middle" /></label></li>
     				</ul>
     			</div>
-    			<button type="roll" value="!power --whisper|gm --name|Reset resource [@{resource1_txt}](!resource_reset,@{character_id},resource1)" name="reset_res1">Request reset</button>
+    			<div class="sheet-addpadding">
+    			    <button type="roll" value="!power --whisper|gm --name|Reset resource [@{resource1_txt}](!resource_reset,@{character_id},resource1)" name="reset_res1">Request reset</button>
+    		    </div>
     		</li>
     		<li>
     			<label><input type="text" name="attr_resource2_txt"/></label>
@@ -326,7 +331,9 @@
     					<li><label class="sheet-result_r2b"><input type="checkbox" name="attr_resource2b" value="d8"><img src="http://www.thefirstcity.co.uk/rpg/dice/d8.jpg" alt="d8" width="32" height="32" border="0" align="middle" /></label></li>
     				</ul>
     			</div>
-    			<button type="roll" value="!power --whisper|gm --name|Reset resource [@{resource1_txt}](!resource_reset,@{character_id},resource2)" name="reset_res2">Request reset</button>
+    			<div class="sheet-addpadding">
+    			    <button type="roll" value="!power --whisper|gm --name|Reset resource [@{resource1_txt}](!resource_reset,@{character_id},resource2)" name="reset_res2">Request reset</button>
+    		    </div>
     		</li>
     		<li>
     			<label><input type="text" name="attr_resource3_txt"/></label>
@@ -336,7 +343,9 @@
     					<li><label class="sheet-result_r3b"><input type="checkbox" name="attr_resource3b" value="d6"><img src="http://www.thefirstcity.co.uk/rpg/dice/d6.jpg" alt="d6" width="32" height="32" border="0" align="middle" /></label></li>
     				</ul>
     			</div>
-    			<button type="roll" value="!power --whisper|gm --name|Reset resource [@{resource1_txt}](!resource_reset,@{character_id},resource3)" name="reset_res3">Request reset</button>
+    			<div class="sheet-addpadding">
+    			    <button type="roll" value="!power --whisper|gm --name|Reset resource [@{resource1_txt}](!resource_reset,@{character_id},resource3)" name="reset_res3">Request reset</button>
+    		    </div>
     		</li>
     		<li>
     		    <label><input type="text" name="attr_resource4_txt"/></label>
@@ -346,7 +355,9 @@
     					<li><label class="sheet-result_r4b"><input type="checkbox" name="attr_resource4b" value="d6"><img src="http://www.thefirstcity.co.uk/rpg/dice/d6.jpg" alt="d6" width="32" height="32" border="0" align="middle" /></label></li>
     				</ul>
     			</div>
-    			<button type="roll" value="!power --whisper|gm --name|Reset resource [@{resource1_txt}](!resource_reset,@{character_id},resource4)" name="reset_res4">Request reset</button>
+    			<div class="sheet-addpadding">
+    			    <button type="roll" value="!power --whisper|gm --name|Reset resource [@{resource1_txt}](!resource_reset,@{character_id},resource4)" name="reset_res4">Request reset</button>
+    		    </div>
     		</li>
     	</ul>
     </div>
