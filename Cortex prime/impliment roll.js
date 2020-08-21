@@ -58,7 +58,7 @@ var DefaultAttributes = DefaultAttributes || (function () {
         
     // Manually add missing attributes to all existing characters
     handleInput = function(msg) {
-        if(msg.type == "api" && msg.content == "!initattributes") {
+        if(msg.type == "api" && msg.content == "!initattributes" && playerIsGM(msg.playerid)) {
             log("Initializing attributes for all existing characters.");
             var allCharacters = findObjs({
                 _type: "character"
