@@ -8,8 +8,8 @@ on('chat:message', function (msg_orig) {
 	    }
 	    else
 	    {
-	        sendChat("API", "!setattr --charid "+ params[1] + " --controller_" + params[2] + "a|active");
-	        sendChat("API", "!setattr --charid "+ params[1] + " --controller_" + params[2] + "b|active");
+	        findObjs({type:'attribute',name:'controller_' + params[2] + 'a',characterid:params[1]})[0].set("current", "active");
+	        findObjs({type:'attribute',name:'controller_' + params[2] + 'b',characterid:params[1]})[0].set("current", "active");
 	    }
 	}
 });

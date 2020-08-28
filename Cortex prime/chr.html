@@ -332,7 +332,7 @@
     				</ul>
     			</div>
     			<div class="sheet-addpadding">
-    			    <button type="roll" value="!power --whisper|gm --name|Reset resource [@{resource1_txt}](!resource_reset,@{character_id},resource2)" name="reset_res2">Request reset</button>
+    			    <button type="roll" value="!power --whisper|gm --name|Reset resource [@{resource2_txt}](!resource_reset,@{character_id},resource2)" name="reset_res2">Request reset</button>
     		    </div>
     		</li>
     		<li>
@@ -344,7 +344,7 @@
     				</ul>
     			</div>
     			<div class="sheet-addpadding">
-    			    <button type="roll" value="!power --whisper|gm --name|Reset resource [@{resource1_txt}](!resource_reset,@{character_id},resource3)" name="reset_res3">Request reset</button>
+    			    <button type="roll" value="!power --whisper|gm --name|Reset resource [@{resource3_txt}](!resource_reset,@{character_id},resource3)" name="reset_res3">Request reset</button>
     		    </div>
     		</li>
     		<li>
@@ -356,7 +356,7 @@
     				</ul>
     			</div>
     			<div class="sheet-addpadding">
-    			    <button type="roll" value="!power --whisper|gm --name|Reset resource [@{resource1_txt}](!resource_reset,@{character_id},resource4)" name="reset_res4">Request reset</button>
+    			    <button type="roll" value="!power --whisper|gm --name|Reset resource [@{resource4_txt}](!resource_reset,@{character_id},resource4)" name="reset_res4">Request reset</button>
     		    </div>
     		</li>
     	</ul>
@@ -436,12 +436,16 @@
 		<div class="sheet-rolltemplate-header">Cortex Roll</div>
 		<div class="sheet-rolltemplate-subheader">Main roll</div>
 		<div class="sheet-rolltemplate-keptdice">Kept: {{kept_main_dice}}</div>
-		<div class="sheet-rolltemplate-unkeptdice">{{unkept_main_dice}}</div>
+		{{#unkept_main_dice}}
+		<div class="sheet-rolltemplate-unkeptdice">Unkept: {{unkept_main_dice}}</div>
+		{{/unkept_main_dice}}
 		{{#kept_resource_dice}}
 		<div class="arrow-container"><div class="arrow-right"></div></div>
 		<div class="sheet-rolltemplate-subheader">Resources roll</div>
 		<div class="sheet-rolltemplate-keptdice">Kept: {{kept_resource_dice}}</div>
-		<div class="sheet-rolltemplate-unkeptdice">{{unkept_resource_dice}}</div>
+		{{#unkept_resource_dice}}
+		<div class="sheet-rolltemplate-unkeptdice">Unkept: {{unkept_resource_dice}}</div>
+		{{/unkept_resource_dice}}
 		{{/kept_resource_dice}}
 		<div class="sheet-rolltemplate-footer">Result: {{total}}</div>
 	</div>

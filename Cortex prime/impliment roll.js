@@ -58,7 +58,7 @@ var DefaultAttributes = DefaultAttributes || (function () {
         
     // Manually add missing attributes to all existing characters
     handleInput = function(msg) {
-        if(msg.type == "api" && msg.content == "!initattributes" && playerIsGM(msg.playerid)) {
+        if(msg.type == "api" && msg.content == "!initattributes") {
             log("Initializing attributes for all existing characters.");
             var allCharacters = findObjs({
                 _type: "character"
@@ -104,50 +104,87 @@ on('chat:message', function (msg_orig) {
     	let return_values = {};
     	let params = {};
     
-    	params.dice_pool= JSON.parse(getAttrByName(character_id, 'main_dice'));
     	params.complications = 0;
     	params.add_plot_point = 0;
-    	params.plot_points = getAttrByName(character_id, 'plot_points_spent');
+	
+        params.dice_pool = JSON.parse(getAttrByName(character_id, 'main_dice'));
+        
+        params.plot_points = getAttrByName(character_id, 'plot_points_spent');
     	var total_plot_points = Number.parseInt(getAttrByName(character_id, 'plot_points'));
         if (params.plot_points > total_plot_points) {
             params.plot_points = total_plot_points;
         }
-    	sorted_rolls(params);
-    	return_values.main_kept_dice = params.kept_dice;
-    	return_values.main_unkept_dice = params.unkept_dice;
-    	return_values.main_result = params.total;
-    	return_values.complications = params.complications;
-    	return_values.plot_points_spent = params.plot_points;
+        
+        return_values.main_dice = sorted_rolls(params).sort_roll;
+    	 
     	stress_type = JSON.parse(getAttrByName(character_id, 'stress_dice')).stress;
+    	
     	for (key of Object.keys(stress_type)) {
     	    stress_type_str = key + "(" + stress_type[key] + ")";
     	}
+    	
     	return_values.stress_type = stress_type_str;
     	
     	let get_res = {}
     	get_res.character = character_id;
-    	
-    	//params.dice_pool= JSON.parse(process_resources(get_res).resource_dice);
-    	params.dice_pool= JSON.parse(getAttrByName(character_id, 'resource_dice'));
-    	
-    	process_resources(get_res);
-    	params.plot_points = -1;
-    	sorted_rolls(params);
+      
+    	params.dice_pool = JSON.parse(getAttrByName(character_id, 'resource_dice'));
+
+        return_values.resource_dice = sorted_rolls(params).sort_roll;
+        if (return_values.resource_dice.length+return_values.main_dice.length < params.plot_points) {
+            params.plot_points = return_values.resource_dice.length+return_values.main_dice.length
+        }
+        return_values.plot_points_spent = params.plot_points;
+        var plot_points = params.plot_points;
         
-    	return_values.resource_kept_dice = params.kept_dice;
-    	return_values.resource_unkept_dice = params.unkept_dice;
-    
-    	return_values.nett_plot_points = return_values.plot_points_spent * -1 + params.add_plot_point;
-    	return_values.resource_result = params.total;
-    	return_values.overall_result = return_values.main_result + return_values.resource_result;
+        process_resources(get_res);
+      
+        main_kept = [];
+        main_unkept=[];
+        resource_kept=[];
+        resource_unkept=[];
+        return_values.overall_result = 0;
+      
+		for (var x=1;x<3;x++) {
+      	    if (return_values.main_dice.length > 0) {
+        	    return_values.overall_result = return_values.overall_result + return_values.main_dice[0][1];
+      		    main_kept.push(return_values.main_dice.shift());
+            }
+        }
+      
+        if (return_values.resource_dice.length > 0) {
+            return_values.overall_result = return_values.overall_result + return_values.resource_dice[0][1];
+        	resource_kept.push(return_values.resource_dice.shift());
+        }
+      
+        var max_result = compare_diceset(return_values.resource_dice, return_values.main_dice);
+      
+        while (max_result.source != 'None' && plot_points > 0) {
+      	    if (max_result.source === 'Main') {
+        	    main_kept.push(return_values.main_dice.shift());
+            } else {
+        	    resource_kept.push(return_values.resource_dice.shift());
+            }
+            return_values.overall_result = return_values.overall_result + max_result.value;
+            plot_points--;
+            max_result = compare_diceset(return_values.resource_dice, return_values.main_dice);
+        }
+      
+        return_values.main_kept_dice = main_kept.join(" ").replace(/,/g,": ");
+        return_values.main_unkept_dice = return_values.main_dice.join(" ").replace(/,/g,": ");
+        return_values.resource_kept_dice = resource_kept.join(" ").replace(/,/g,": ");
+        return_values.resource_unkept_dice = return_values.resource_dice.join(" ").replace(/,/g,": ");
+
+        return_values.complications = params.complications;
+        return_values.nett_plot_points = return_values.plot_points_spent * -1 + params.add_plot_point;
         
         var complications= "";
         if (return_values.complications > 0) {
             complications = return_values.complications;
         }
-        	
-    	findObjs({type:'attribute',name:'plot_points_spent',characterid:character_id})[0].set("current", 0);
-    	findObjs({type:'attribute',name:'plot_points',characterid:character_id})[0].set("current", total_plot_points + return_values.nett_plot_points);
+
+        findObjs({type:'attribute',name:'plot_points_spent',characterid:character_id})[0].set("current", 0);
+        findObjs({type:'attribute',name:'plot_points',characterid:character_id})[0].set("current", total_plot_points + return_values.nett_plot_points);
     	sendChat(character_name, "&{template:cortex_roll} {{kept_main_dice="+ return_values.main_kept_dice +"}} {{unkept_main_dice=" + return_values.main_unkept_dice + "}} {{kept_resource_dice=" + return_values.resource_kept_dice+"}} {{unkept_resource_dice=" + return_values.resource_unkept_dice +"}} {{total=" + return_values.overall_result + "}} {{complications=" + complications + "}} {{stress_type=" + return_values.stress_type +"}}");
 	}
 });
@@ -156,28 +193,45 @@ function sorted_rolls(params){
 	params.sort_roll = [];
 	for (var value of Object.values(params.dice_pool)){
 		for (var key of Object.keys(value)) {
-			var roll = randomInteger(value[key].substr(1));
+      var roll = parseInt(Math.floor(Math.random() * value[key].substr(1))+1);
+			/*var roll = randomInteger(value[key].substr(1));*/
 			params.sort_roll.push([key,roll]);
 			if (value[key]==="d4") {
 				params.add_plot_point = 1;
 			}
 			if (roll === 1) {
-				params.complications = params.complications + 1
+				params.complications++;
 			}
 		}   
 	}
 	params.sort_roll.sort(function(a, b) { return b[1] -a[1];});
-	var kept_dice = params.sort_roll.slice(0,  params.plot_points+2);
-	params.total = 0;
-	for (var value of Object.values(kept_dice)) {
-		params.total = params.total + parseInt(value[1]);
-	}
-	params.kept_dice = kept_dice.join(" ").replace(/,/g,": ");
-
-	var unkept_dice = params.sort_roll.slice(params.plot_points+2);
-	params.unkept_dice = unkept_dice.join(" ").replace(/,/g,": ");
 
 	return params;
+}
+
+function compare_diceset(resource, main) {
+	main_value = 0;
+  resource_value = 0;
+  result = {};
+  if (main.length > 0) {
+  	main_value = main[0][1]; 
+  }
+  
+  if (resource.length > 0) {
+  	resource_value = resource[0][1];
+  }
+  
+  result.value = Math.max(main_value,resource_value);
+  if (result.value===0) {
+  	result.source = 'None'
+    return result
+  }
+  if (result.value==main_value) {
+  	result.source = 'Main';
+  } else {
+  	result.source = 'Resource';
+  }
+  return result;
 }
 
 function process_resources(parameters) {
@@ -192,11 +246,11 @@ function process_resources(parameters) {
   var target_list = all_attrs.filter(function (item) {
   var attr_name = item.get("name");
   if (regex.test(attr_name)) {
-      sendChat(parameters.character," name:controller_" + attr_name + " matched");    
+      //sendChat(parameters.character," name:controller_" + attr_name + " matched");    
       var attr_current = item.get("current");
       if (attr_current != 0) {
         //suppress visibility of dice
-        sendChat(parameters.character," name:controller_" + attr_name + " set");
+        //sendChat(parameters.character," name:controller_" + attr_name + " set");
         findObjs({type:'attribute',name:"controller_" + attr_name, characterid:parameters.character})[0].set("current","inactive"); 
         return true;
 	  }
