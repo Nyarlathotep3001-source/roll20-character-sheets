@@ -1,4 +1,3 @@
-// JavaScript Document
 var DefaultAttributes = DefaultAttributes || (function () {
     'use strict';
 
@@ -27,7 +26,26 @@ var DefaultAttributes = DefaultAttributes || (function () {
             },
             "controller_resource4b": {
                 "current": "active",
+            },
+            "plot_points_spent": {
+                "current": "0",
+            },
+            "plot_points": {
+                "current": "0",
+            },
+            "resource_dice": {
+                "current": "{}",
+            },
+            "resource_diceroll": {
+                "current": "{\"d4\":0,\"d6\":0,\"d8\":0,\"d10\":0,\"d12\":0}",
+            },
+            "main_dice": {
+                "current": "{}",
+            },
+            "main_diceroll": {
+                "current": "{\"d4\":0,\"d6\":0,\"d8\":0,\"d10\":0,\"d12\":0}",
             }
+            
         },
 
         // Function which adds missing attributes to a character
@@ -237,20 +255,21 @@ function compare_diceset(resource, main) {
 function process_resources(parameters) {
   
   //store resource_dice
+  sendChat(parameters.character,"starting process resource");
   var resource_dicepool = findObjs({type:'attribute',name:'resource_dice',characterid:parameters.character})[0];
   parameters.resource_dice = resource_dicepool.get('current');
+  sendChat(parameters.character,"got resource_dicepool");
   let all_attrs = findObjs({type:'attribute',characterid:parameters.character});
+  
   //reset selected dice
   const regex = new RegExp('^resource[0-9]+[a-b]+$');
-
+  
   var target_list = all_attrs.filter(function (item) {
   var attr_name = item.get("name");
   if (regex.test(attr_name)) {
-      //sendChat(parameters.character," name:controller_" + attr_name + " matched");    
       var attr_current = item.get("current");
       if (attr_current != 0) {
         //suppress visibility of dice
-        //sendChat(parameters.character," name:controller_" + attr_name + " set");
         findObjs({type:'attribute',name:"controller_" + attr_name, characterid:parameters.character})[0].set("current","inactive"); 
         return true;
 	  }
@@ -263,7 +282,7 @@ function process_resources(parameters) {
   for (var attr of target_list) {
       attr.set("current", 0);
   }
-  
+  sendChat(parameters.character,"Completed first target list length:" + target_list.length + " first entry: " + target_list[0]);
   //erase resouce dice selected box
   const regex3 = new RegExp('^resource_d[0-9]+_[0-9]+$');
   target_list = all_attrs.filter(function (item) {
@@ -274,7 +293,7 @@ function process_resources(parameters) {
   for (var attr of target_list) {
     attr.set("current","one");
   }
-  
+  sendChat(parameters.character,"Completed second target list length:" + target_list.length + " first entry: " + target_list[0]);
   //erase resource_dice attribute
   const regex4 = new RegExp('^resource_diceroll$');
   target_list = all_attrs.filter(function (item) {
@@ -285,6 +304,7 @@ function process_resources(parameters) {
   for (var attr of target_list) {
     attr.set("current","{}");
   }
+  sendChat(parameters.character,"Completed third target list length:" + target_list.length + " first entry: " + target_list[0]);
   
   //erase resource_dicepool attribute
   resource_dicepool.set("current","{}")

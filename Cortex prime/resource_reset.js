@@ -1,4 +1,3 @@
-// JavaScript Document
 on('chat:message', function (msg_orig) {
 	var msg = _.clone(msg_orig);
 	if (msg.type == "api" && msg.content.indexOf("!resource_reset") === 0 && playerIsGM(msg.playerid)) {
