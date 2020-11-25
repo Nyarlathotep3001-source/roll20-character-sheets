@@ -2,54 +2,139 @@
 /* CSS Document */
 
 .sheet-container {
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";;
   display: grid;
   grid-template-columns: repeat(3,"1fr");
   grid-template-rows: auto;
   grid-template-areas: 
-    "header header header"
-    "abilities_1 . abilities_2"
-    "footer footer footer";
+	"title title title title"  
+    "name name stability_source stability_source"
+	"mos  mos stability_source stability_source"
+	"drive drive stability_source stability_source"   
+    "stability stability health health"
+	"skills_1 skills_2 skills_3 skills_4"
+    "footer1 footer2 footer3 footer4";
   grid-gap: 8px;
 }
 
 .sheet-container > div {
-  background-color: limegreen;
+  background-color: #444444;
   color: white;
   font-size: 3.2vw;
   padding: 8px;
 }
 
-.sheet-ability_grid {
+.sheet-main_header{
+	grid-area:title;
+}
+.sheet-header {
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";;	
+}
+
+.sheet-skills_grid {
 	display: grid;
-	grid-template-columns: minmax(30px, 200px) minmax(30px, 200px) minmax(30px, 200px);
+	grid-template-columns: minmax(150px, 450px) minmax(75px, 100px) minmax(75px, 100px);
 	grid-gap: 5px;
 }
 
-.sheet-ability_grid > span {
-  background: lightgreen;
+.sheet-skills_grid > span {
+  background: darkgrey;
   font-size: 1vw;
   padding: 8px;
 }
 
-.sheet-ability_grid > span.sheet-attribute_header {
-  font-size: 2.4vw;
+.sheet-skills_grid > span.sheet-skills_header {
+  font-size: 1.5vw;
 }
 
-.sheet-ability_grid > span.sheet-attribute_sub_header {
+.sheet-skills_grid > span.sheet-skills_sub_header {
   	grid-column: span 3;
 	font-size: 2vw;
 }
 
-.sheet-container_header {
-	grid-area:header;
+.sheet-skills_block1 {
+	grid-area: skills_1;	
 }
 
-.sheet-attribute_block1 {
-	grid-area: abilities_1;	
+.sheet-skills_block2 {
+	grid-area: skills_2;	
 }
-.sheet-attribute_block2 {
-	grid-area: abilities_2;	
+
+.sheet-skills_block3 {
+	grid-area: skills_3;	
 }
+.sheet-skills_block4 {
+	grid-area: skills_4;	
+}
+
 .sheet-container_footer {
-	grid-area: footer;	
+	font-size:1.6vw;
+}
+
+.sheet-container_footer > span {
+	font-size:1.6vw;
+	border-color: black;	
+	border-radius: 5px;
+	box-sizing:border-box;
+	height: 50px;
+	width: 100%;
+}
+
+.sheet-container_name {
+	grid-area: name;	
+}
+
+.sheet-container_mos {
+	grid-area: mos;	
+}
+
+.sheet-container_drive {
+	grid-area: drive;	
+}
+
+.sheet-container_backgrounds {
+	grid-area: backgrounds;	
+}
+
+.sheet-container_stability_sources {
+	grid-area: stability_source;	
+}
+
+.sheet-center {
+	width:50px;
+	text-align:center;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	font-size: 1vw;
+	padding: 1px;
+	margin: 1px;
+}
+
+.sheet-style_input {
+	margin: 10px;
+	border:black;
+	border-width: 2px;
+}
+
+.sheet-style_input > div {
+	font-size:1.6vw;	
+}
+
+.sheet-style_input input[type='text'] {
+	border-color: black;	
+	border-radius: 5px;
+	box-sizing:border-box;
+	height: 50px;
+	width: 100%;
+}
+
+.sheet-style_input > div > span > input[type='text'] {
+	height: 70px;
+}
+
+.sheet-container_stability {
+	grid-area: stability;
+}
+
+.sheet-container_health {
+	grid-area: health;
 }
